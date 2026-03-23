@@ -465,7 +465,7 @@ ui <- dashboardPage(
             h3("Citation"),
             tags$pre("PGx-ADR: A Quantitative Pharmacogenomic Risk Calculator
 for Adverse Drug Reactions. 2026.
-GitHub: https://github.com/[username]/pgx-adr-calculator")
+GitHub: https://github.com/shivani-tuli/pgx-adr-calculator")
           )
         )
       )

@@ -29,7 +29,18 @@ DEFAULT_PHARMCAT_DIR = os.path.join(
 )
 
 # Java 17 path (Homebrew)
-JAVA_HOME = "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
+# Detect Java 17 dynamically
+JAVA_HOME = os.environ.get("JAVA_HOME", "")
+if not JAVA_HOME or not os.path.isdir(JAVA_HOME):
+    for candidate in [
+        "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home",  # macOS ARM
+        "/usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home",     # macOS Intel
+        "/usr/lib/jvm/java-17-openjdk-amd64",                              # Debian/Ubuntu
+        "/usr/lib/jvm/java-17-openjdk",                                    # RHEL/Fedora
+    ]:
+        if os.path.isdir(candidate):
+            JAVA_HOME = candidate
+            break
 
 
 def find_pharmcat(pharmcat_dir):

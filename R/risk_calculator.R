@@ -15,8 +15,7 @@
 # Maps PharmGKB/CPIC evidence levels to numerical weights
 EVIDENCE_WEIGHTS <- c(
   "1A" = 1.0,   # CPIC guideline, FDA label
-
-"1B" = 0.9,   # Strong evidence, replicated studies
+  "1B" = 0.9,   # Strong evidence, replicated studies
   "2A" = 0.7,   # VIP gene, PharmGKB annotation
   "2B" = 0.5,   # PharmGKB annotation, moderate evidence
   "3"  = 0.3,   # Single significant study
@@ -427,7 +426,23 @@ summarize_interactions <- function(concomitant_meds, inhibitor_db,
 PHARMCAT_DIR <- file.path(getwd(), "pharmcat")
 PHARMCAT_WRAPPER <- file.path(getwd(), "scripts", "pharmcat_wrapper.py")
 PHARMCAT_PYTHON <- file.path(PHARMCAT_DIR, ".venv", "bin", "python3")
-JAVA_HOME_17 <- "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
+# Detect Java 17 dynamically (env var → platform-specific paths)
+JAVA_HOME_17 <- Sys.getenv("JAVA_HOME", unset = "")
+if (JAVA_HOME_17 == "" || !dir.exists(JAVA_HOME_17)) {
+  java_candidates <- c(
+    "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home",  # macOS ARM
+    "/usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home",     # macOS Intel
+    "/usr/lib/jvm/java-17-openjdk-amd64",                              # Debian/Ubuntu
+    "/usr/lib/jvm/java-17-openjdk",                                    # RHEL/Fedora
+    Sys.getenv("JAVA_HOME", unset = "")
+  )
+  for (candidate in java_candidates) {
+    if (candidate != "" && dir.exists(candidate)) {
+      JAVA_HOME_17 <- candidate
+      break
+    }
+  }
+}
 PHARMGKB_UPDATER <- file.path(getwd(), "scripts", "update_pharmgkb_data.py")
 PHARMGKB_REPORT <- file.path(getwd(), "data", "pharmgkb_update_report.json")
 

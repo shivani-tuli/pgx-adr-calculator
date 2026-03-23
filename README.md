@@ -109,7 +109,7 @@ install.packages(c(
 
 ```r
 # Clone the repository
-# git clone https://github.com/[username]/pgx-adr-calculator.git
+# git clone https://github.com/shivani-tuli/pgx-adr-calculator.git
 
 # Set working directory
 setwd("pgx-adr-calculator")
@@ -195,7 +195,7 @@ If you use PGx-ADR in your research, please cite:
 
 ```
 PGx-ADR: A Quantitative Pharmacogenomic Risk Calculator for Adverse Drug Reactions.
-GitHub: https://github.com/[username]/pgx-adr-calculator
+GitHub: https://github.com/shivani-tuli/pgx-adr-calculator
 ```
 
 ## References

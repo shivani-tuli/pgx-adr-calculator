@@ -4,6 +4,9 @@
 .Rproj.user
 *.Rproj
 
+# rsconnect deployment credentials
+rsconnect/
+
 # PharmCAT binaries (too large for GitHub, download separately)
 pharmcat/*.jar
 pharmcat/*.bgz
