@@ -1,0 +1,26 @@
+# R / Shiny
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+
+# PharmCAT binaries (too large for GitHub, download separately)
+pharmcat/*.jar
+pharmcat/*.bgz
+pharmcat/*.bgz.*
+pharmcat/*.fna.*
+pharmcat/*.bed
+pharmcat/*.vcf
+pharmcat/.venv/
+pharmcat/pcat/__pycache__/
+
+# Cache
+data/cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc

@@ -1,0 +1,3 @@
+2026-03-23 18:39:26,991 WARN o.p.p.v.VcfParser [VcfParser.java:109] There are 1 samples in the header but 0 in the metadata
+2026-03-23 18:39:28,256 WARN o.p.p.v.VcfParser [VcfParser.java:109] There are 1 samples in the header but 0 in the metadata
+2026-03-23 18:39:28,570 INFO o.p.p.p.Phenotyper [Phenotyper.java:173] Writing Phenotyper JSON to /tmp/pharmcat_output/pharmcat_example.phenotype.json

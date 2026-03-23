@@ -1,0 +1,23 @@
+meta_analysis_id,gene,drug_name,pooled_effect_size,effect_type,ci_lower,ci_upper,n_studies,total_n,heterogeneity_i2,pmid,first_author,year,journal,meta_analysis_title
+MA001,CYP2C19,Clopidogrel,1.57,HR,1.13,2.16,9,9685,,20801498,Mega,2010,JAMA,Cytochrome P-450 polymorphisms and response to clopidogrel
+MA002,CYP2C19,Clopidogrel,2.81,HR,1.81,4.37,9,9685,,20801498,Mega,2010,JAMA,Stent thrombosis risk in CYP2C19 LoF carriers
+MA003,CYP2C19,Clopidogrel,1.62,RR,1.42,1.86,15,,,36450637,Wang,2022,PMC,MACE risk CYP2C19 LoF vs alternative antiplatelets
+MA004,SLCO1B1,Simvastatin,4.50,OR_per_allele,2.60,7.70,1,12064,,18650507,SEARCH,2008,NEJM,SEARCH GWAS simvastatin myopathy
+MA005,SLCO1B1,Simvastatin,16.90,OR,4.70,61.10,1,12064,,18650507,SEARCH,2008,NEJM,CC vs TT genotype 80mg simvastatin
+MA006,SLCO1B1,Statins_all,2.90,OR,1.59,5.34,15,,,31636355,Xiang,2018,Frontiers,CC vs TT all statins myopathy meta-analysis
+MA007,SLCO1B1,Statins_all,1.60,OR,1.20,2.16,15,,,31636355,Xiang,2018,Frontiers,TC vs TT all statins myopathy meta-analysis
+MA008,CYP2C9,Warfarin,2.05,HR,1.36,3.10,22,,,23800783,Defined,2013,PMC,*1/*3 total hemorrhage risk
+MA009,CYP2C9,Warfarin,4.87,HR,1.38,17.14,22,,,23800783,Defined,2013,PMC,*3/*3 total hemorrhage risk
+MA010,CYP2C9,Warfarin,2.43,HR,1.17,5.06,22,,,23800783,Defined,2013,PMC,*1/*3 major hemorrhage risk
+MA011,VKORC1,Warfarin,2.14,HR,1.75,2.62,22,,,23800783,Defined,2013,PMC,GA+AA over-anticoagulation <30 days
+MA012,DPYD,Fluorouracil,2.54,RR,2.15,3.00,5,,,27296574,Defined,2016,PMC,DPYD variants severe 5-FU toxicity
+MA013,DPYD,Fluorouracil,25.60,OR,12.10,53.90,,,,,Henricks,2019,JCO,DPYD variants treatment-related death
+MA014,TPMT,Thiopurines,3.90,OR,2.50,6.10,,,31342537,Defined,2019,PMC,TPMT leukopenia pooled OR
+MA015,TPMT,Thiopurines,6.67,OR,3.88,11.47,,,25201288,Defined,2015,PMC,TPMT bone marrow toxicity IBD
+MA016,UGT1A1,Irinotecan,3.44,OR,2.45,4.82,,,23529007,Hu,2013,PMC,*28/*28 vs >=1 *1 allele neutropenia
+MA017,UGT1A1,Irinotecan,5.34,OR,3.05,9.33,49,5232,,28529590,Liu,2017,J_Cancer,*28/*28 vs *1/*1 severe neutropenia
+MA018,UGT1A1,Irinotecan,1.90,OR,1.44,2.51,,,,23529007,Hu,2013,PMC,*1/*28 heterozygous neutropenia
+MA019,CYP2B6,Efavirenz,1.67,OR,1.15,2.44,,,31636355,Defined,2019,PMC,TT vs GG CNS side effects (inverted from 0.60 GG vs TT+GT)
+MA020,CYP2B6,Efavirenz,1.47,OR,1.10,1.96,,,31636355,Defined,2019,PMC,GT+TT vs GG CNS toxicity (inverted from 0.68)
+MA021,CYP2D6,Tamoxifen,1.34,RR,1.10,1.63,,,39540781,Defined,2025,JAMA,PM vs NM recurrence bias-adjusted
+MA022,CYP3A5,Tacrolimus,1.50,dose_ratio,,,,,25201288,Defined,2014,PMC,*1 expressers need 1.5-2x dose vs *3/*3

@@ -1,0 +1,85 @@
+gene,diplotype,phenotype,activity_score,drug_name,drug_class,primary_adr,adr_severity,risk_ratio,evidence_level,pharmgkb_gene_id,cpic_gene,source,last_updated,meta_analysis_id,pmid,ci_lower,ci_upper,rr_source
+CYP2D6,*1/*4,Intermediate Metabolizer,1.0,Codeine,Opioid,Reduced Analgesic Effect,Clinical Impact,1.5,1A,PA128,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,,28520350,,,meta-analysis
+CYP2D6,*4/*4,Poor Metabolizer,0.0,Codeine,Opioid,Treatment Failure (Analgesic),Clinical Impact,2.5,1A,PA128,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,,28520350,,,meta-analysis
+CYP2D6,*4/*10,Poor Metabolizer,0.25,Codeine,Opioid,Treatment Failure (Analgesic),Clinical Impact,2.5,1A,PA128,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,,28520350,,,meta-analysis
+CYP2D6,*1/*1xN,Ultrarapid Metabolizer,3.0,Codeine,Opioid,Respiratory Depression/Toxicity,Life-threatening,3.5,1A,PA128,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,,28520350,,,meta-analysis
+CYP2D6,*2/*2xN,Ultrarapid Metabolizer,3.0,Codeine,Opioid,Respiratory Depression/Toxicity,Life-threatening,3.5,1A,PA128,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,,28520350,,,meta-analysis
+CYP2D6,*1/*4,Intermediate Metabolizer,1.0,Tramadol,Opioid,Reduced Analgesic Effect,Clinical Impact,1.50,1A,PA128,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2D6,*4/*4,Poor Metabolizer,0.0,Tramadol,Opioid,Treatment Failure (Analgesic),Clinical Impact,2.30,1A,PA128,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2D6,*1/*4,Intermediate Metabolizer,1.0,Tamoxifen,Anticancer,Reduced Efficacy,Severe,1.34,1A,PA128,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA021,39540781,1.1,1.63,meta-analysis
+CYP2D6,*4/*4,Poor Metabolizer,0.0,Tamoxifen,Anticancer,Reduced Efficacy/Recurrence,Severe,1.34,1A,PA128,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA021,39540781,1.1,1.63,meta-analysis
+CYP2D6,*1/*10,Intermediate Metabolizer,1.25,Tamoxifen,Anticancer,Reduced Efficacy,Moderate,1.34,1A,PA128,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA021,39540781,1.1,1.63,meta-analysis
+CYP2D6,*10/*10,Intermediate Metabolizer,0.5,Tamoxifen,Anticancer,Reduced Efficacy,Severe,1.34,1A,PA128,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA021,39540781,1.1,1.63,meta-analysis
+CYP2D6,*1/*4,Intermediate Metabolizer,1.0,Ondansetron,Antiemetic,Reduced Efficacy,Clinical Impact,1.40,2A,PA128,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2D6,*4/*4,Poor Metabolizer,0.0,Ondansetron,Antiemetic,Treatment Failure,Clinical Impact,1.80,2A,PA128,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2D6,*1/*4,Intermediate Metabolizer,1.0,Atomoxetine,ADHD,Increased Side Effects,Moderate,1.50,1A,PA128,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2D6,*4/*4,Poor Metabolizer,0.0,Atomoxetine,ADHD,Increased Side Effects/Toxicity,Severe,2.50,1A,PA128,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*1/*2,Intermediate Metabolizer,1.0,Clopidogrel,Antiplatelet,Increased MACE Risk,Severe,1.57,1A,PA124,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA001,20801498,1.13,2.16,meta-analysis
+CYP2C19,*2/*2,Poor Metabolizer,0.0,Clopidogrel,Antiplatelet,Major Cardiovascular Events,Life-threatening,2.81,1A,PA124,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA002,20801498,1.81,4.37,meta-analysis
+CYP2C19,*2/*3,Poor Metabolizer,0.0,Clopidogrel,Antiplatelet,Major Cardiovascular Events,Life-threatening,2.81,1A,PA124,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA002,20801498,1.81,4.37,meta-analysis
+CYP2C19,*1/*17,Rapid Metabolizer,1.5,Clopidogrel,Antiplatelet,Increased Bleeding,Moderate,1.3,2A,PA124,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA003,36450637,,,meta-analysis
+CYP2C19,*17/*17,Ultrarapid Metabolizer,2.0,Clopidogrel,Antiplatelet,Increased Bleeding,Severe,1.52,2A,PA124,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA003,36450637,,,meta-analysis
+CYP2C19,*1/*2,Intermediate Metabolizer,1.0,Escitalopram,SSRI,Treatment Failure,Clinical Impact,1.50,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*2/*2,Poor Metabolizer,0.0,Escitalopram,SSRI,Treatment Failure,Clinical Impact,2.00,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*17/*17,Ultrarapid Metabolizer,2.0,Escitalopram,SSRI,Subtherapeutic Levels,Clinical Impact,1.60,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*1/*2,Intermediate Metabolizer,1.0,Sertraline,SSRI,Treatment Failure,Clinical Impact,1.45,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*2/*2,Poor Metabolizer,0.0,Sertraline,SSRI,Treatment Failure,Clinical Impact,1.90,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*1/*2,Intermediate Metabolizer,1.0,Citalopram,SSRI,Treatment Failure/QT Prolongation,Severe,1.60,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*2/*2,Poor Metabolizer,0.0,Citalopram,SSRI,QT Prolongation/Toxicity,Life-threatening,2.50,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*1/*2,Intermediate Metabolizer,1.0,Voriconazole,Antifungal,Reduced Efficacy,Moderate,1.50,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*2/*2,Poor Metabolizer,0.0,Voriconazole,Antifungal,Hepatotoxicity/Toxicity,Severe,3.00,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*17/*17,Ultrarapid Metabolizer,2.0,Voriconazole,Antifungal,Treatment Failure,Clinical Impact,2.50,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*1/*2,Intermediate Metabolizer,1.0,Omeprazole,PPI,Reduced Efficacy,Clinical Impact,1.35,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*2/*2,Poor Metabolizer,0.0,Omeprazole,PPI,Increased Exposure (Beneficial),Clinical Impact,0.80,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C19,*1/*2,Intermediate Metabolizer,1.0,Lansoprazole,PPI,Reduced Efficacy,Clinical Impact,1.35,1A,PA124,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C9,*1/*2,Intermediate Metabolizer,1.5,Warfarin,Anticoagulant,Dose Sensitivity,Severe,2.05,1A,PA126,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA008,23800783,1.36,3.1,meta-analysis
+CYP2C9,*1/*3,Intermediate Metabolizer,1.0,Warfarin,Anticoagulant,Dose Sensitivity (High Risk),Severe,2.05,1A,PA126,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA008,23800783,1.36,3.1,meta-analysis
+CYP2C9,*2/*2,Poor Metabolizer,1.0,Warfarin,Anticoagulant,Major Bleeding Risk,Life-threatening,4.87,1A,PA126,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA009,23800783,1.38,17.14,meta-analysis
+CYP2C9,*2/*3,Poor Metabolizer,0.5,Warfarin,Anticoagulant,Major Bleeding Risk,Life-threatening,4.87,1A,PA126,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA009,23800783,1.38,17.14,meta-analysis
+CYP2C9,*3/*3,Poor Metabolizer,0.0,Warfarin,Anticoagulant,Major Bleeding Risk,Life-threatening,4.87,1A,PA126,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA009,23800783,1.38,17.14,meta-analysis
+CYP2C9,*1/*2,Intermediate Metabolizer,1.5,Phenytoin,Antiepileptic,Dose Sensitivity,Moderate,1.60,1A,PA126,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C9,*1/*3,Intermediate Metabolizer,1.0,Phenytoin,Antiepileptic,Toxicity/SJS Risk,Severe,2.20,1A,PA126,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C9,*2/*3,Poor Metabolizer,0.5,Phenytoin,Antiepileptic,Severe Toxicity/SJS Risk,Life-threatening,3.50,1A,PA126,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C9,*1/*2,Intermediate Metabolizer,1.5,Celecoxib,NSAID,GI/CV Toxicity Risk,Moderate,1.40,2A,PA126,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C9,*1/*3,Intermediate Metabolizer,1.0,Celecoxib,NSAID,GI/CV Toxicity Risk,Moderate,1.75,2A,PA126,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2C9,*3/*3,Poor Metabolizer,0.0,Celecoxib,NSAID,Severe GI/CV Toxicity,Severe,3.00,2A,PA126,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+VKORC1,-1639 A/A,High Sensitivity,N/A,Warfarin,Anticoagulant,Dose Sensitivity (Bleeding if unadjusted),Severe,2.50,1A,PA133,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+VKORC1,-1639 G/A,Intermediate Sensitivity,N/A,Warfarin,Anticoagulant,Dose Sensitivity (Mild),Moderate,1.76,1A,PA133,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+SLCO1B1,*1/*5,Intermediate Function,N/A,Simvastatin,Statin,Myopathy/Rhabdomyolysis,Severe,2.9,1A,PA134,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA006,31636355,1.59,5.34,meta-analysis
+SLCO1B1,*5/*5,Poor Function,N/A,Simvastatin,Statin,Rhabdomyolysis,Life-threatening,16.9,1A,PA134,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA005,18650507,4.7,61.1,meta-analysis
+SLCO1B1,*1/*5,Intermediate Function,N/A,Atorvastatin,Statin,Myopathy,Moderate,1.73,2A,PA134,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+SLCO1B1,*5/*5,Poor Function,N/A,Atorvastatin,Statin,Myopathy/Rhabdomyolysis,Severe,3.00,2A,PA134,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+SLCO1B1,*1/*5,Intermediate Function,N/A,Rosuvastatin,Statin,Myopathy,Moderate,1.65,2A,PA134,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP2B6,*1/*6,Intermediate Metabolizer,N/A,Efavirenz,Antiretroviral,CNS Toxicity,Moderate,1.47,1A,PA123,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA020,31636355,1.1,1.96,meta-analysis
+CYP2B6,*6/*6,Poor Metabolizer,N/A,Efavirenz,Antiretroviral,Severe CNS Toxicity,Severe,1.67,1A,PA123,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA019,31636355,1.15,2.44,meta-analysis
+CYP2B6,*1/*6,Intermediate Metabolizer,N/A,Methadone,Opioid,QT Prolongation Risk,Moderate,1.55,2B,PA123,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP3A5,*1/*3,Intermediate Metabolizer,N/A,Tacrolimus,Immunosuppressant,Standard Dosing Needed,Clinical Impact,1.3,1A,PA131,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA022,25201288,,,meta-analysis
+CYP3A5,*3/*3,Poor Metabolizer,N/A,Tacrolimus,Immunosuppressant,Nephrotoxicity (Overexposure),Severe,1.8,1A,PA131,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA022,25201288,,,meta-analysis
+CYP3A5,*3/*3,Poor Metabolizer,N/A,Cyclosporine,Immunosuppressant,Nephrotoxicity,Moderate,1.45,2B,PA131,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP4F2,*1/*3,Intermediate,N/A,Warfarin,Anticoagulant,Dose Adjustment Needed,Moderate,1.35,1B,PA39410,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+CYP4F2,*3/*3,High Dose Required,N/A,Warfarin,Anticoagulant,Dose Adjustment Needed,Moderate,1.70,1B,PA39410,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+TPMT,*1/*3A,Intermediate Metabolizer,N/A,Mercaptopurine,Anticancer,Myelosuppression,Severe,3.9,1A,PA356,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA014,31342537,2.5,6.1,meta-analysis
+TPMT,*3A/*3A,Poor Metabolizer,N/A,Mercaptopurine,Anticancer,Severe Myelosuppression/Death,Life-threatening,6.67,1A,PA356,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA015,25201288,3.88,11.47,meta-analysis
+TPMT,*1/*3C,Intermediate Metabolizer,N/A,Mercaptopurine,Anticancer,Myelosuppression,Severe,3.9,1A,PA356,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA014,31342537,2.5,6.1,meta-analysis
+TPMT,*1/*3A,Intermediate Metabolizer,N/A,Azathioprine,Immunosuppressant,Myelosuppression,Severe,3.9,1A,PA356,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA014,31342537,2.5,6.1,meta-analysis
+TPMT,*3A/*3A,Poor Metabolizer,N/A,Azathioprine,Immunosuppressant,Severe Myelosuppression/Death,Life-threatening,6.67,1A,PA356,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA015,25201288,3.88,11.47,meta-analysis
+TPMT,*1/*3A,Intermediate Metabolizer,N/A,Thioguanine,Anticancer,Myelosuppression,Severe,3.9,1A,PA356,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA014,31342537,2.5,6.1,meta-analysis
+NUDT15,*1/*3,Intermediate Metabolizer,N/A,Mercaptopurine,Anticancer,Myelosuppression,Severe,3.00,1A,PA166228080,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+NUDT15,*3/*3,Poor Metabolizer,N/A,Mercaptopurine,Anticancer,Severe Myelosuppression,Life-threatening,8.00,1A,PA166228080,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+NUDT15,*1/*3,Intermediate Metabolizer,N/A,Azathioprine,Immunosuppressant,Myelosuppression,Severe,2.80,1A,PA166228080,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+NUDT15,*3/*3,Poor Metabolizer,N/A,Azathioprine,Immunosuppressant,Severe Myelosuppression,Life-threatening,7.50,1A,PA166228080,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+DPYD,*1/*2A,Intermediate Metabolizer,1.0,Fluorouracil,Anticancer,Severe Toxicity,Severe,2.54,1A,PA145,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA012,27296574,2.15,3.0,meta-analysis
+DPYD,*2A/*2A,Poor Metabolizer,0.0,Fluorouracil,Anticancer,Fatal Toxicity,Life-threatening,25.6,1A,PA145,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA013,27296574,12.1,53.9,meta-analysis
+DPYD,*1/*13,Intermediate Metabolizer,1.0,Fluorouracil,Anticancer,Severe Toxicity,Severe,2.54,1A,PA145,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA012,27296574,2.15,3.0,meta-analysis
+DPYD,*1/*2A,Intermediate Metabolizer,1.0,Capecitabine,Anticancer,Severe Toxicity,Severe,2.54,1A,PA145,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA012,27296574,2.15,3.0,meta-analysis
+DPYD,*2A/*2A,Poor Metabolizer,0.0,Capecitabine,Anticancer,Fatal Toxicity,Life-threatening,25.6,1A,PA145,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA013,27296574,12.1,53.9,meta-analysis
+UGT1A1,*1/*28,Intermediate Metabolizer,N/A,Irinotecan,Anticancer,Neutropenia/Diarrhea,Moderate,1.9,1A,PA420,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA018,23529007,1.44,2.51,meta-analysis
+UGT1A1,*28/*28,Poor Metabolizer,N/A,Irinotecan,Anticancer,Severe Neutropenia/Diarrhea,Severe,3.44,1A,PA420,True,Meta-analysis,2026-03-23T23:07:23.771161+00:00,MA016,23529007,2.45,4.82,meta-analysis
+UGT1A1,*1/*80,Intermediate Metabolizer,N/A,Atazanavir,Antiretroviral,Hyperbilirubinemia,Moderate,1.80,1A,PA420,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+UGT1A1,*80/*80,Poor Metabolizer,N/A,Atazanavir,Antiretroviral,Severe Jaundice,Severe,4.00,1A,PA420,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+G6PD,B (wildtype)/A-,Intermediate,N/A,Rasburicase,Antigout,Hemolytic Anemia Risk,Severe,4.00,1A,PA28469,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+G6PD,A-/A-,Deficient,N/A,Rasburicase,Antigout,Severe Hemolytic Anemia,Life-threatening,8.00,1A,PA28469,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+G6PD,B (wildtype)/A-,Intermediate,N/A,Dapsone,Antibiotic,Hemolytic Anemia Risk,Moderate,2.00,1B,PA28469,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+G6PD,A-/A-,Deficient,N/A,Dapsone,Antibiotic,Severe Hemolytic Anemia,Severe,4.00,1B,PA28469,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+IFNL3,rs12979860 C/T,Intermediate Response,N/A,Peginterferon alfa-2a,Antiviral,Reduced Response,Clinical Impact,1.60,1A,PA134952956,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated
+IFNL3,rs12979860 T/T,Poor Response,N/A,Peginterferon alfa-2a,Antiviral,Treatment Failure,Clinical Impact,3.00,1A,PA134952956,True,PharmGKB_API,2026-03-23T22:44:01.553225+00:00,,,,,curated

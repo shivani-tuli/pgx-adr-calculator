@@ -1,0 +1,64 @@
+variant_rsid,gene,allele_name,drug_name,drug_class,primary_adr,adr_severity,risk_ratio,evidence_level,global_maf,eur_af,afr_af,eas_af,sas_af,amr_af,pharmgkb_variant_id,pharmgkb_annotation_id,source,last_updated,meta_analysis_id,pmid,ci_lower,ci_upper,rr_source
+rs1799853,CYP2C9,*2,Warfarin,Anticoagulant,Major Bleeding,Life-threatening,2.05,1A,0.12,0.13,0.02,0.0,0.07,0.08,PA166153972,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA008,23800783,1.36,3.1,meta-analysis
+rs1057910,CYP2C9,*3,Warfarin,Anticoagulant,Major Bleeding,Life-threatening,3.12,1A,0.06,0.07,0.01,0.04,0.1,0.04,PA166153959,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA009,23800783,1.38,17.14,meta-analysis
+rs9923231,VKORC1,-1639G>A,Warfarin,Anticoagulant,Dose Sensitivity (Bleeding if unadjusted),Severe,2.14,1A,0.39,0.4,0.11,0.92,0.34,0.35,PA166155091,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA011,23800783,1.75,2.62,meta-analysis
+rs4149056,SLCO1B1,*5,Simvastatin,Statin,Myopathy/Rhabdomyolysis,Severe,4.5,1A,0.08,0.15,0.02,0.11,0.04,0.09,PA166154579,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA004,18650507,2.6,7.7,meta-analysis
+rs4149056,SLCO1B1,*5,Atorvastatin,Statin,Myopathy,Moderate,2.0,2A,0.08,0.15,0.02,0.11,0.04,0.09,PA166154579,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA007,31636355,1.11,3.52,meta-analysis
+rs4149056,SLCO1B1,*5,Rosuvastatin,Statin,Myopathy,Moderate,1.6,2A,0.08,0.15,0.02,0.11,0.04,0.09,PA166154579,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA007,31636355,1.2,2.16,meta-analysis
+rs4244285,CYP2C19,*2,Clopidogrel,Antiplatelet,Major Cardiovascular Events,Life-threatening,1.57,1A,0.22,0.15,0.17,0.3,0.33,0.12,PA166154053,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA001,20801498,1.13,2.16,meta-analysis
+rs4986893,CYP2C19,*3,Clopidogrel,Antiplatelet,Major Cardiovascular Events,Life-threatening,1.57,1A,0.01,0.0,0.0,0.06,0.01,0.0,PA166154070,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA001,20801498,1.13,2.16,meta-analysis
+rs12248560,CYP2C19,*17,Clopidogrel,Antiplatelet,Bleeding,Severe,1.52,2A,0.21,0.21,0.24,0.04,0.16,0.15,PA166154147,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA003,36450637,,,meta-analysis
+rs4244285,CYP2C19,*2,Escitalopram,SSRI,Treatment Failure,Clinical Impact,1.5,1A,0.22,0.15,0.17,0.3,0.33,0.12,PA166154053,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs4244285,CYP2C19,*2,Sertraline,SSRI,Treatment Failure,Clinical Impact,1.45,1A,0.22,0.15,0.17,0.3,0.33,0.12,PA166154053,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs4244285,CYP2C19,*2,Citalopram,SSRI,Treatment Failure/QT Prolongation,Severe,1.6,1A,0.22,0.15,0.17,0.3,0.33,0.12,PA166154053,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs4244285,CYP2C19,*2,Voriconazole,Antifungal,Hepatotoxicity,Severe,2.0,1A,0.22,0.15,0.17,0.3,0.33,0.12,PA166154053,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs4244285,CYP2C19,*2,Omeprazole,PPI,Reduced Efficacy,Clinical Impact,1.35,1A,0.22,0.15,0.17,0.3,0.33,0.12,PA166154053,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs4244285,CYP2C19,*2,Lansoprazole,PPI,Reduced Efficacy,Clinical Impact,1.35,1A,0.22,0.15,0.17,0.3,0.33,0.12,PA166154053,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs12248560,CYP2C19,*17,Voriconazole,Antifungal,Treatment Failure,Clinical Impact,1.7,1A,0.21,0.21,0.24,0.04,0.16,0.15,PA166154147,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs3892097,CYP2D6,*4,Codeine,Opioid,Treatment Failure (Analgesic),Clinical Impact,2.0,1A,0.12,0.19,0.07,0.01,0.09,0.11,PA166156104,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,,28520350,,,meta-analysis
+rs3892097,CYP2D6,*4,Tramadol,Opioid,Treatment Failure,Clinical Impact,1.65,1A,0.12,0.19,0.07,0.01,0.09,0.11,PA166156104,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs3892097,CYP2D6,*4,Tamoxifen,Anticancer,Reduced Efficacy/Recurrence,Severe,1.34,1A,0.12,0.19,0.07,0.01,0.09,0.11,PA166156104,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA021,39540781,1.1,1.63,meta-analysis
+rs3892097,CYP2D6,*4,Ondansetron,Antiemetic,Treatment Failure,Clinical Impact,1.4,2A,0.12,0.19,0.07,0.01,0.09,0.11,PA166156104,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs5030655,CYP2D6,*6,Codeine,Opioid,Treatment Failure (Analgesic),Clinical Impact,2.0,1A,0.01,0.01,0.0,0.0,0.0,0.01,PA166156111,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,,28520350,,,meta-analysis
+rs1065852,CYP2D6,*10,Codeine,Opioid,Altered Response,Moderate,1.35,1B,0.2,0.04,0.06,0.43,0.2,0.08,PA166156062,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1065852,CYP2D6,*10,Tamoxifen,Anticancer,Reduced Efficacy,Severe,1.34,1A,0.2,0.04,0.06,0.43,0.2,0.08,PA166156062,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA021,39540781,1.1,1.63,meta-analysis
+rs16947,CYP2D6,*2,Codeine,Opioid,Ultra-rapid Metabolism Toxicity,Severe,1.45,2A,0.33,0.28,0.5,0.15,0.35,0.35,PA166156031,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs28399504,CYP2D6,*4N,Atomoxetine,ADHD,Increased Side Effects,Moderate,1.7,1A,0.12,0.19,0.07,0.01,0.09,0.11,PA166154177,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs3745274,CYP2B6,*6,Efavirenz,Antiretroviral,CNS Toxicity,Severe,1.67,1A,0.28,0.26,0.45,0.2,0.22,0.25,PA166155409,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA019,31636355,1.15,2.44,meta-analysis
+rs3745274,CYP2B6,*6,Methadone,Opioid,QT Prolongation,Severe,1.55,2B,0.28,0.26,0.45,0.2,0.22,0.25,PA166155409,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs776746,CYP3A5,*3,Tacrolimus,Immunosuppressant,Nephrotoxicity,Severe,1.8,1A,0.65,0.93,0.32,0.73,0.67,0.77,PA166157267,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA022,25201288,,,meta-analysis
+rs776746,CYP3A5,*3,Cyclosporine,Immunosuppressant,Nephrotoxicity,Moderate,1.45,2B,0.65,0.93,0.32,0.73,0.67,0.77,PA166157267,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs2108622,CYP4F2,*3,Warfarin,Anticoagulant,Dose Adjustment Needed,Moderate,1.35,1B,0.22,0.28,0.08,0.25,0.2,0.19,PA166155381,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1800460,TPMT,*3B,Mercaptopurine,Anticancer,Myelosuppression,Life-threatening,5.0,1A,0.01,0.01,0.01,0.0,0.01,0.01,PA166156992,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1142345,TPMT,*3C,Mercaptopurine,Anticancer,Myelosuppression,Life-threatening,5.0,1A,0.03,0.03,0.05,0.02,0.03,0.03,PA166156978,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1800460,TPMT,*3B,Azathioprine,Immunosuppressant,Myelosuppression,Life-threatening,4.5,1A,0.01,0.01,0.01,0.0,0.01,0.01,PA166156992,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1142345,TPMT,*3C,Azathioprine,Immunosuppressant,Myelosuppression,Life-threatening,4.5,1A,0.03,0.03,0.05,0.02,0.03,0.03,PA166156978,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1800460,TPMT,*3B,Thioguanine,Anticancer,Myelosuppression,Life-threatening,5.0,1A,0.01,0.01,0.01,0.0,0.01,0.01,PA166156992,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs116855232,NUDT15,*3,Mercaptopurine,Anticancer,Myelosuppression,Life-threatening,4.8,1A,0.04,0.0,0.0,0.1,0.04,0.02,PA166154759,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs116855232,NUDT15,*3,Azathioprine,Immunosuppressant,Myelosuppression,Life-threatening,4.5,1A,0.04,0.0,0.0,0.1,0.04,0.02,PA166154759,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs3918290,DPYD,*2A,Fluorouracil,Anticancer,Severe Toxicity/Death,Life-threatening,2.54,1A,0.01,0.01,0.0,0.0,0.01,0.01,PA166153760,,Meta-analysis,2026-03-23T23:07:23.768365+00:00,MA012,27296574,2.15,3.0,meta-analysis
+rs55886062,DPYD,*13,Fluorouracil,Anticancer,Severe Toxicity,Life-threatening,5.5,1A,0.0,0.0,0.0,0.0,0.0,0.0,PA166153888,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs67376798,DPYD,D949V,Fluorouracil,Anticancer,Severe Toxicity,Severe,3.1,1A,0.01,0.01,0.0,0.0,0.0,0.01,PA166153895,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs3918290,DPYD,*2A,Capecitabine,Anticancer,Severe Toxicity/Death,Life-threatening,6.44,1A,0.01,0.01,0.0,0.0,0.01,0.01,PA166153760,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs887829,UGT1A1,*80,Atazanavir,Antiretroviral,Hyperbilirubinemia/Jaundice,Moderate,2.4,1A,0.33,0.32,0.42,0.15,0.33,0.3,PA166155607,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs8175347,UGT1A1,*28,Irinotecan,Anticancer,Neutropenia/Diarrhea,Severe,2.0,1A,0.32,0.32,0.42,0.15,0.33,0.3,PA166159020,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs2032582,ABCB1,G2677T/A,Methotrexate,Anticancer,Toxicity,Moderate,1.45,2B,0.42,0.42,0.45,0.4,0.38,0.47,PA166157316,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1045642,ABCB1,C3435T,Digoxin,Cardiac Glycoside,Toxicity,Severe,1.55,2B,0.48,0.52,0.16,0.6,0.45,0.4,PA166157284,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs4148323,UGT1A1,*6,Irinotecan,Anticancer,Neutropenia,Severe,1.85,1B,0.04,0.0,0.0,0.13,0.02,0.01,PA166155721,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs2279343,CYP2B6,*4,Efavirenz,Antiretroviral,Treatment Failure,Clinical Impact,1.4,2A,0.04,0.04,0.05,0.02,0.03,0.04,PA166155393,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1801133,MTHFR,C677T,Methotrexate,Anticancer,Toxicity,Moderate,1.65,2B,0.3,0.35,0.1,0.33,0.14,0.44,PA166153644,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1801131,MTHFR,A1298C,Methotrexate,Anticancer,Toxicity,Moderate,1.35,3,0.25,0.3,0.12,0.2,0.18,0.3,PA166153643,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs2306283,SLCO1B1,*1b,Methotrexate,Anticancer,Reduced Clearance,Moderate,1.4,2B,0.42,0.4,0.7,0.45,0.38,0.35,PA166154547,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1051266,SLC19A1,80G>A,Methotrexate,Anticancer,Toxicity/Reduced Efficacy,Moderate,1.3,3,0.45,0.44,0.5,0.42,0.46,0.43,PA166155986,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1050828,G6PD,A-,Rasburicase,Antigout,Hemolytic Anemia,Life-threatening,8.0,1A,0.08,0.0,0.2,0.0,0.02,0.04,PA166157859,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1050828,G6PD,A-,Dapsone,Antibiotic,Hemolytic Anemia,Severe,4.0,1B,0.08,0.0,0.2,0.0,0.02,0.04,PA166157859,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1050828,G6PD,A-,Chloroquine,Antimalarial,Hemolytic Anemia,Severe,3.5,1B,0.08,0.0,0.2,0.0,0.02,0.04,PA166157859,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs12979860,IFNL3,rs12979860,Peginterferon alfa-2a,Antiviral,Treatment Failure,Clinical Impact,2.0,1A,0.34,0.37,0.24,0.07,0.25,0.36,PA166155468,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs2476601,PTPN22,R620W,Peginterferon alfa-2b,Antiviral,Thyroid ADR,Moderate,1.55,3,0.07,0.1,0.01,0.0,0.03,0.05,PA166153706,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1799971,OPRM1,A118G,Codeine,Opioid,Altered Response,Moderate,1.3,2B,0.16,0.15,0.03,0.4,0.19,0.14,PA166156991,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs2032582,ABCB1,G2677T/A,Tacrolimus,Immunosuppressant,Altered Exposure,Moderate,1.35,2B,0.42,0.42,0.45,0.4,0.38,0.47,PA166157316,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1045642,ABCB1,C3435T,Tacrolimus,Immunosuppressant,Altered Exposure,Moderate,1.35,2B,0.48,0.52,0.16,0.6,0.45,0.4,PA166157284,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1057910,CYP2C9,*3,Phenytoin,Antiepileptic,Toxicity/SJS Risk,Severe,2.2,1A,0.06,0.07,0.01,0.04,0.1,0.04,PA166153959,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1799853,CYP2C9,*2,Celecoxib,NSAID,Cardiovascular/GI Toxicity,Moderate,1.55,2A,0.12,0.13,0.02,0.0,0.07,0.08,PA166153972,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs1057910,CYP2C9,*3,Celecoxib,NSAID,Cardiovascular/GI Toxicity,Moderate,1.75,2A,0.06,0.07,0.01,0.04,0.1,0.04,PA166153959,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated
+rs9934438,VKORC1,1173C>T,Acenocoumarol,Anticoagulant,Dose Sensitivity (Bleeding if unadjusted),Severe,1.82,1A,0.39,0.41,0.1,0.92,0.34,0.35,PA166155096,,PharmGKB_API,2026-03-23T22:44:01.549345+00:00,,,,,curated

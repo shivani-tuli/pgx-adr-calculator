@@ -1,0 +1,1114 @@
+{
+  "validation_date": "2026-03-23T23:20:24.548117+00:00",
+  "data_source": "FDA FAERS via openFDA API",
+  "api_endpoint": "https://api.fda.gov/drug/event.json",
+  "methodology": "Proportional Reporting Ratio (PRR) vs predicted Risk Ratio",
+  "n_drug_adr_pairs_tested": 68,
+  "n_skipped": 0,
+  "spearman_rho": 0.4051,
+  "n_valid_pairs": 68,
+  "interpretation": "Moderate positive correlation (\u03c1=0.405). Predicted risk ratios align well with real-world FAERS adverse event reporting patterns.",
+  "results": [
+    {
+      "drug_name": "Atazanavir",
+      "drug_class": "Antiretroviral",
+      "primary_adr": "Hyperbilirubinemia",
+      "gene": "UGT1A1",
+      "predicted_rr": 1.8,
+      "faers_total_reports": 14438,
+      "faers_adr_reports": 684,
+      "faers_prr": 32.017,
+      "meddra_terms": [
+        "HYPERBILIRUBINAEMIA",
+        "JAUNDICE"
+      ],
+      "log_rr": 0.588,
+      "log_prr": 3.466
+    },
+    {
+      "drug_name": "Atazanavir",
+      "drug_class": "Antiretroviral",
+      "primary_adr": "Severe Jaundice",
+      "gene": "UGT1A1",
+      "predicted_rr": 4.0,
+      "faers_total_reports": 14438,
+      "faers_adr_reports": 370,
+      "faers_prr": 22.919,
+      "meddra_terms": [
+        "JAUNDICE"
+      ],
+      "log_rr": 1.386,
+      "log_prr": 3.132
+    },
+    {
+      "drug_name": "Atomoxetine",
+      "drug_class": "ADHD",
+      "primary_adr": "Increased Side Effects",
+      "gene": "CYP2D6",
+      "predicted_rr": 1.5,
+      "faers_total_reports": 26240,
+      "faers_adr_reports": 4521,
+      "faers_prr": 2.881,
+      "meddra_terms": [
+        "NAUSEA",
+        "INSOMNIA",
+        "DIZZINESS",
+        "TACHYCARDIA"
+      ],
+      "log_rr": 0.405,
+      "log_prr": 1.058
+    },
+    {
+      "drug_name": "Atomoxetine",
+      "drug_class": "ADHD",
+      "primary_adr": "Increased Side Effects/Toxicity",
+      "gene": "CYP2D6",
+      "predicted_rr": 2.5,
+      "faers_total_reports": 26240,
+      "faers_adr_reports": 2803,
+      "faers_prr": 2.391,
+      "meddra_terms": [
+        "NAUSEA",
+        "TACHYCARDIA",
+        "OVERDOSE"
+      ],
+      "log_rr": 0.916,
+      "log_prr": 0.872
+    },
+    {
+      "drug_name": "Atorvastatin",
+      "drug_class": "Statin",
+      "primary_adr": "Myopathy",
+      "gene": "SLCO1B1",
+      "predicted_rr": 1.73,
+      "faers_total_reports": 243887,
+      "faers_adr_reports": 13724,
+      "faers_prr": 5.043,
+      "meddra_terms": [
+        "MYOPATHY",
+        "MYALGIA",
+        "MUSCULAR WEAKNESS"
+      ],
+      "log_rr": 0.548,
+      "log_prr": 1.618
+    },
+    {
+      "drug_name": "Atorvastatin",
+      "drug_class": "Statin",
+      "primary_adr": "Myopathy/Rhabdomyolysis",
+      "gene": "SLCO1B1",
+      "predicted_rr": 3.0,
+      "faers_total_reports": 243887,
+      "faers_adr_reports": 13513,
+      "faers_prr": 5.904,
+      "meddra_terms": [
+        "RHABDOMYOLYSIS",
+        "MYOPATHY",
+        "MYALGIA",
+        "BLOOD CREATINE PHOSPHOKINASE INCREASED"
+      ],
+      "log_rr": 1.099,
+      "log_prr": 1.776
+    },
+    {
+      "drug_name": "Azathioprine",
+      "drug_class": "Immunosuppressant",
+      "primary_adr": "Myelosuppression",
+      "gene": "TPMT",
+      "predicted_rr": 3.9,
+      "faers_total_reports": 86806,
+      "faers_adr_reports": 3174,
+      "faers_prr": 3.728,
+      "meddra_terms": [
+        "NEUTROPENIA",
+        "LEUKOPENIA",
+        "PANCYTOPENIA",
+        "BONE MARROW FAILURE"
+      ],
+      "log_rr": 1.361,
+      "log_prr": 1.316
+    },
+    {
+      "drug_name": "Azathioprine",
+      "drug_class": "Immunosuppressant",
+      "primary_adr": "Severe Myelosuppression",
+      "gene": "NUDT15",
+      "predicted_rr": 7.5,
+      "faers_total_reports": 86806,
+      "faers_adr_reports": 1306,
+      "faers_prr": 3.093,
+      "meddra_terms": [
+        "PANCYTOPENIA",
+        "FEBRILE NEUTROPENIA"
+      ],
+      "log_rr": 2.015,
+      "log_prr": 1.129
+    },
+    {
+      "drug_name": "Azathioprine",
+      "drug_class": "Immunosuppressant",
+      "primary_adr": "Severe Myelosuppression/Death",
+      "gene": "TPMT",
+      "predicted_rr": 6.67,
+      "faers_total_reports": 86806,
+      "faers_adr_reports": 2606,
+      "faers_prr": 0.738,
+      "meddra_terms": [
+        "PANCYTOPENIA",
+        "FEBRILE NEUTROPENIA",
+        "DEATH"
+      ],
+      "log_rr": 1.898,
+      "log_prr": -0.304
+    },
+    {
+      "drug_name": "Capecitabine",
+      "drug_class": "Anticancer",
+      "primary_adr": "Fatal Toxicity",
+      "gene": "DPYD",
+      "predicted_rr": 25.6,
+      "faers_total_reports": 88888,
+      "faers_adr_reports": 12598,
+      "faers_prr": 3.13,
+      "meddra_terms": [
+        "DEATH",
+        "NEUTROPENIA",
+        "SEPSIS"
+      ],
+      "log_rr": 3.243,
+      "log_prr": 1.141
+    },
+    {
+      "drug_name": "Capecitabine",
+      "drug_class": "Anticancer",
+      "primary_adr": "Severe Toxicity",
+      "gene": "DPYD",
+      "predicted_rr": 2.54,
+      "faers_total_reports": 88888,
+      "faers_adr_reports": 15992,
+      "faers_prr": 5.446,
+      "meddra_terms": [
+        "NEUTROPENIA",
+        "DIARRHOEA",
+        "STOMATITIS",
+        "MUCOSITIS ORAL"
+      ],
+      "log_rr": 0.932,
+      "log_prr": 1.695
+    },
+    {
+      "drug_name": "Celecoxib",
+      "drug_class": "NSAID",
+      "primary_adr": "GI/CV Toxicity Risk",
+      "gene": "CYP2C9",
+      "predicted_rr": 1.75,
+      "faers_total_reports": 128106,
+      "faers_adr_reports": 8111,
+      "faers_prr": 5.951,
+      "meddra_terms": [
+        "GASTROINTESTINAL HAEMORRHAGE",
+        "MYOCARDIAL INFARCTION"
+      ],
+      "log_rr": 0.56,
+      "log_prr": 1.784
+    },
+    {
+      "drug_name": "Celecoxib",
+      "drug_class": "NSAID",
+      "primary_adr": "Severe GI/CV Toxicity",
+      "gene": "CYP2C9",
+      "predicted_rr": 3.0,
+      "faers_total_reports": 128106,
+      "faers_adr_reports": 8111,
+      "faers_prr": 5.951,
+      "meddra_terms": [
+        "GASTROINTESTINAL HAEMORRHAGE",
+        "MYOCARDIAL INFARCTION"
+      ],
+      "log_rr": 1.099,
+      "log_prr": 1.784
+    },
+    {
+      "drug_name": "Citalopram",
+      "drug_class": "SSRI",
+      "primary_adr": "QT Prolongation/Toxicity",
+      "gene": "CYP2C19",
+      "predicted_rr": 2.5,
+      "faers_total_reports": 133496,
+      "faers_adr_reports": 1698,
+      "faers_prr": 8.914,
+      "meddra_terms": [
+        "ELECTROCARDIOGRAM QT PROLONGED"
+      ],
+      "log_rr": 0.916,
+      "log_prr": 2.188
+    },
+    {
+      "drug_name": "Citalopram",
+      "drug_class": "SSRI",
+      "primary_adr": "Treatment Failure/QT Prolongation",
+      "gene": "CYP2C19",
+      "predicted_rr": 1.6,
+      "faers_total_reports": 133496,
+      "faers_adr_reports": 8947,
+      "faers_prr": 1.192,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE",
+        "ELECTROCARDIOGRAM QT PROLONGED"
+      ],
+      "log_rr": 0.47,
+      "log_prr": 0.176
+    },
+    {
+      "drug_name": "Clopidogrel",
+      "drug_class": "Antiplatelet",
+      "primary_adr": "Increased Bleeding",
+      "gene": "CYP2C19",
+      "predicted_rr": 1.52,
+      "faers_total_reports": 206534,
+      "faers_adr_reports": 4149,
+      "faers_prr": 4.766,
+      "meddra_terms": [
+        "HAEMORRHAGE"
+      ],
+      "log_rr": 0.419,
+      "log_prr": 1.562
+    },
+    {
+      "drug_name": "Clopidogrel",
+      "drug_class": "Antiplatelet",
+      "primary_adr": "Increased MACE Risk",
+      "gene": "CYP2C19",
+      "predicted_rr": 1.57,
+      "faers_total_reports": 206534,
+      "faers_adr_reports": 10153,
+      "faers_prr": 6.957,
+      "meddra_terms": [
+        "MYOCARDIAL INFARCTION",
+        "STENT THROMBOSIS"
+      ],
+      "log_rr": 0.451,
+      "log_prr": 1.94
+    },
+    {
+      "drug_name": "Clopidogrel",
+      "drug_class": "Antiplatelet",
+      "primary_adr": "Major Cardiovascular Events",
+      "gene": "CYP2C19",
+      "predicted_rr": 2.81,
+      "faers_total_reports": 206534,
+      "faers_adr_reports": 16173,
+      "faers_prr": 5.852,
+      "meddra_terms": [
+        "MYOCARDIAL INFARCTION",
+        "STENT THROMBOSIS",
+        "CEREBROVASCULAR ACCIDENT"
+      ],
+      "log_rr": 1.033,
+      "log_prr": 1.767
+    },
+    {
+      "drug_name": "Codeine",
+      "drug_class": "Opioid",
+      "primary_adr": "Reduced Analgesic Effect",
+      "gene": "CYP2D6",
+      "predicted_rr": 1.5,
+      "faers_total_reports": 20260,
+      "faers_adr_reports": 3408,
+      "faers_prr": 2.154,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE",
+        "PAIN"
+      ],
+      "log_rr": 0.405,
+      "log_prr": 0.767
+    },
+    {
+      "drug_name": "Codeine",
+      "drug_class": "Opioid",
+      "primary_adr": "Respiratory Depression/Toxicity",
+      "gene": "CYP2D6",
+      "predicted_rr": 3.5,
+      "faers_total_reports": 20260,
+      "faers_adr_reports": 2578,
+      "faers_prr": 13.443,
+      "meddra_terms": [
+        "RESPIRATORY DEPRESSION",
+        "OVERDOSE"
+      ],
+      "log_rr": 1.253,
+      "log_prr": 2.598
+    },
+    {
+      "drug_name": "Codeine",
+      "drug_class": "Opioid",
+      "primary_adr": "Treatment Failure (Analgesic)",
+      "gene": "CYP2D6",
+      "predicted_rr": 2.5,
+      "faers_total_reports": 20260,
+      "faers_adr_reports": 3408,
+      "faers_prr": 2.154,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE",
+        "PAIN"
+      ],
+      "log_rr": 0.916,
+      "log_prr": 0.767
+    },
+    {
+      "drug_name": "Cyclosporine",
+      "drug_class": "Immunosuppressant",
+      "primary_adr": "Nephrotoxicity",
+      "gene": "CYP3A5",
+      "predicted_rr": 1.45,
+      "faers_total_reports": 109202,
+      "faers_adr_reports": 5482,
+      "faers_prr": 4.56,
+      "meddra_terms": [
+        "RENAL IMPAIRMENT",
+        "BLOOD CREATININE INCREASED",
+        "RENAL FAILURE"
+      ],
+      "log_rr": 0.372,
+      "log_prr": 1.517
+    },
+    {
+      "drug_name": "Dapsone",
+      "drug_class": "Antibiotic",
+      "primary_adr": "Hemolytic Anemia Risk",
+      "gene": "G6PD",
+      "predicted_rr": 2.0,
+      "faers_total_reports": 10188,
+      "faers_adr_reports": 155,
+      "faers_prr": 41.412,
+      "meddra_terms": [
+        "HAEMOLYTIC ANAEMIA"
+      ],
+      "log_rr": 0.693,
+      "log_prr": 3.724
+    },
+    {
+      "drug_name": "Dapsone",
+      "drug_class": "Antibiotic",
+      "primary_adr": "Severe Hemolytic Anemia",
+      "gene": "G6PD",
+      "predicted_rr": 4.0,
+      "faers_total_reports": 10188,
+      "faers_adr_reports": 155,
+      "faers_prr": 41.412,
+      "meddra_terms": [
+        "HAEMOLYTIC ANAEMIA"
+      ],
+      "log_rr": 1.386,
+      "log_prr": 3.724
+    },
+    {
+      "drug_name": "Efavirenz",
+      "drug_class": "Antiretroviral",
+      "primary_adr": "CNS Toxicity",
+      "gene": "CYP2B6",
+      "predicted_rr": 1.47,
+      "faers_total_reports": 11069,
+      "faers_adr_reports": 738,
+      "faers_prr": 1.594,
+      "meddra_terms": [
+        "DIZZINESS",
+        "INSOMNIA",
+        "HALLUCINATION",
+        "ABNORMAL DREAMS",
+        "DEPRESSION"
+      ],
+      "log_rr": 0.385,
+      "log_prr": 0.466
+    },
+    {
+      "drug_name": "Efavirenz",
+      "drug_class": "Antiretroviral",
+      "primary_adr": "Severe CNS Toxicity",
+      "gene": "CYP2B6",
+      "predicted_rr": 1.67,
+      "faers_total_reports": 11069,
+      "faers_adr_reports": 238,
+      "faers_prr": 0.871,
+      "meddra_terms": [
+        "DIZZINESS",
+        "HALLUCINATION",
+        "PSYCHOTIC DISORDER"
+      ],
+      "log_rr": 0.513,
+      "log_prr": -0.138
+    },
+    {
+      "drug_name": "Escitalopram",
+      "drug_class": "SSRI",
+      "primary_adr": "Subtherapeutic Levels",
+      "gene": "CYP2C19",
+      "predicted_rr": 1.6,
+      "faers_total_reports": 134565,
+      "faers_adr_reports": 8667,
+      "faers_prr": 1.168,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE",
+        "DRUG LEVEL DECREASED"
+      ],
+      "log_rr": 0.47,
+      "log_prr": 0.155
+    },
+    {
+      "drug_name": "Escitalopram",
+      "drug_class": "SSRI",
+      "primary_adr": "Treatment Failure",
+      "gene": "CYP2C19",
+      "predicted_rr": 2.0,
+      "faers_total_reports": 134565,
+      "faers_adr_reports": 14046,
+      "faers_prr": 1.589,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE",
+        "DEPRESSION",
+        "THERAPEUTIC RESPONSE DECREASED"
+      ],
+      "log_rr": 0.693,
+      "log_prr": 0.463
+    },
+    {
+      "drug_name": "Fluorouracil",
+      "drug_class": "Anticancer",
+      "primary_adr": "Fatal Toxicity",
+      "gene": "DPYD",
+      "predicted_rr": 25.6,
+      "faers_total_reports": 73528,
+      "faers_adr_reports": 8040,
+      "faers_prr": 2.406,
+      "meddra_terms": [
+        "DEATH",
+        "NEUTROPENIA",
+        "SEPSIS"
+      ],
+      "log_rr": 3.243,
+      "log_prr": 0.878
+    },
+    {
+      "drug_name": "Fluorouracil",
+      "drug_class": "Anticancer",
+      "primary_adr": "Severe Toxicity",
+      "gene": "DPYD",
+      "predicted_rr": 2.54,
+      "faers_total_reports": 73528,
+      "faers_adr_reports": 11271,
+      "faers_prr": 4.615,
+      "meddra_terms": [
+        "NEUTROPENIA",
+        "DIARRHOEA",
+        "STOMATITIS",
+        "MUCOSITIS ORAL"
+      ],
+      "log_rr": 0.932,
+      "log_prr": 1.529
+    },
+    {
+      "drug_name": "Irinotecan",
+      "drug_class": "Anticancer",
+      "primary_adr": "Neutropenia/Diarrhea",
+      "gene": "UGT1A1",
+      "predicted_rr": 1.9,
+      "faers_total_reports": 12005,
+      "faers_adr_reports": 1994,
+      "faers_prr": 5.256,
+      "meddra_terms": [
+        "NEUTROPENIA",
+        "DIARRHOEA"
+      ],
+      "log_rr": 0.642,
+      "log_prr": 1.659
+    },
+    {
+      "drug_name": "Irinotecan",
+      "drug_class": "Anticancer",
+      "primary_adr": "Severe Neutropenia/Diarrhea",
+      "gene": "UGT1A1",
+      "predicted_rr": 3.44,
+      "faers_total_reports": 12005,
+      "faers_adr_reports": 2063,
+      "faers_prr": 5.935,
+      "meddra_terms": [
+        "FEBRILE NEUTROPENIA",
+        "DIARRHOEA"
+      ],
+      "log_rr": 1.235,
+      "log_prr": 1.781
+    },
+    {
+      "drug_name": "Lansoprazole",
+      "drug_class": "PPI",
+      "primary_adr": "Reduced Efficacy",
+      "gene": "CYP2C19",
+      "predicted_rr": 1.35,
+      "faers_total_reports": 173092,
+      "faers_adr_reports": 6440,
+      "faers_prr": 0.677,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE"
+      ],
+      "log_rr": 0.3,
+      "log_prr": -0.39
+    },
+    {
+      "drug_name": "Mercaptopurine",
+      "drug_class": "Anticancer",
+      "primary_adr": "Myelosuppression",
+      "gene": "TPMT",
+      "predicted_rr": 3.9,
+      "faers_total_reports": 16851,
+      "faers_adr_reports": 1220,
+      "faers_prr": 7.34,
+      "meddra_terms": [
+        "NEUTROPENIA",
+        "LEUKOPENIA",
+        "PANCYTOPENIA",
+        "BONE MARROW FAILURE"
+      ],
+      "log_rr": 1.361,
+      "log_prr": 1.993
+    },
+    {
+      "drug_name": "Mercaptopurine",
+      "drug_class": "Anticancer",
+      "primary_adr": "Severe Myelosuppression",
+      "gene": "NUDT15",
+      "predicted_rr": 8.0,
+      "faers_total_reports": 16851,
+      "faers_adr_reports": 2181,
+      "faers_prr": 26.905,
+      "meddra_terms": [
+        "PANCYTOPENIA",
+        "FEBRILE NEUTROPENIA"
+      ],
+      "log_rr": 2.079,
+      "log_prr": 3.292
+    },
+    {
+      "drug_name": "Mercaptopurine",
+      "drug_class": "Anticancer",
+      "primary_adr": "Severe Myelosuppression/Death",
+      "gene": "TPMT",
+      "predicted_rr": 6.67,
+      "faers_total_reports": 16851,
+      "faers_adr_reports": 2458,
+      "faers_prr": 3.597,
+      "meddra_terms": [
+        "PANCYTOPENIA",
+        "FEBRILE NEUTROPENIA",
+        "DEATH"
+      ],
+      "log_rr": 1.898,
+      "log_prr": 1.28
+    },
+    {
+      "drug_name": "Methadone",
+      "drug_class": "Opioid",
+      "primary_adr": "QT Prolongation Risk",
+      "gene": "CYP2B6",
+      "predicted_rr": 1.55,
+      "faers_total_reports": 45069,
+      "faers_adr_reports": 870,
+      "faers_prr": 13.245,
+      "meddra_terms": [
+        "ELECTROCARDIOGRAM QT PROLONGED"
+      ],
+      "log_rr": 0.438,
+      "log_prr": 2.584
+    },
+    {
+      "drug_name": "Omeprazole",
+      "drug_class": "PPI",
+      "primary_adr": "Increased Exposure (Beneficial)",
+      "gene": "CYP2C19",
+      "predicted_rr": 0.8,
+      "faers_total_reports": 437013,
+      "faers_adr_reports": 607,
+      "faers_prr": 2.041,
+      "meddra_terms": [
+        "DRUG LEVEL INCREASED"
+      ],
+      "log_rr": -0.223,
+      "log_prr": 0.713
+    },
+    {
+      "drug_name": "Omeprazole",
+      "drug_class": "PPI",
+      "primary_adr": "Reduced Efficacy",
+      "gene": "CYP2C19",
+      "predicted_rr": 1.35,
+      "faers_total_reports": 437013,
+      "faers_adr_reports": 22623,
+      "faers_prr": 0.943,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE"
+      ],
+      "log_rr": 0.3,
+      "log_prr": -0.059
+    },
+    {
+      "drug_name": "Ondansetron",
+      "drug_class": "Antiemetic",
+      "primary_adr": "Reduced Efficacy",
+      "gene": "CYP2D6",
+      "predicted_rr": 1.4,
+      "faers_total_reports": 115101,
+      "faers_adr_reports": 4242,
+      "faers_prr": 0.671,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE"
+      ],
+      "log_rr": 0.336,
+      "log_prr": -0.399
+    },
+    {
+      "drug_name": "Ondansetron",
+      "drug_class": "Antiemetic",
+      "primary_adr": "Treatment Failure",
+      "gene": "CYP2D6",
+      "predicted_rr": 1.8,
+      "faers_total_reports": 115101,
+      "faers_adr_reports": 5803,
+      "faers_prr": 0.764,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE",
+        "DEPRESSION",
+        "THERAPEUTIC RESPONSE DECREASED"
+      ],
+      "log_rr": 0.588,
+      "log_prr": -0.269
+    },
+    {
+      "drug_name": "Peginterferon alfa-2a",
+      "drug_class": "Antiviral",
+      "primary_adr": "Reduced Response",
+      "gene": "IFNL3",
+      "predicted_rr": 1.6,
+      "faers_total_reports": 53653,
+      "faers_adr_reports": 1742,
+      "faers_prr": 0.592,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE"
+      ],
+      "log_rr": 0.47,
+      "log_prr": -0.524
+    },
+    {
+      "drug_name": "Peginterferon alfa-2a",
+      "drug_class": "Antiviral",
+      "primary_adr": "Treatment Failure",
+      "gene": "IFNL3",
+      "predicted_rr": 3.0,
+      "faers_total_reports": 53653,
+      "faers_adr_reports": 4251,
+      "faers_prr": 1.203,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE",
+        "DEPRESSION",
+        "THERAPEUTIC RESPONSE DECREASED"
+      ],
+      "log_rr": 1.099,
+      "log_prr": 0.185
+    },
+    {
+      "drug_name": "Phenytoin",
+      "drug_class": "Antiepileptic",
+      "primary_adr": "Dose Sensitivity",
+      "gene": "CYP2C9",
+      "predicted_rr": 1.6,
+      "faers_total_reports": 39851,
+      "faers_adr_reports": 181,
+      "faers_prr": 3.724,
+      "meddra_terms": [
+        "INTERNATIONAL NORMALISED RATIO INCREASED"
+      ],
+      "log_rr": 0.47,
+      "log_prr": 1.315
+    },
+    {
+      "drug_name": "Phenytoin",
+      "drug_class": "Antiepileptic",
+      "primary_adr": "Severe Toxicity/SJS Risk",
+      "gene": "CYP2C9",
+      "predicted_rr": 3.5,
+      "faers_total_reports": 39851,
+      "faers_adr_reports": 1642,
+      "faers_prr": 28.217,
+      "meddra_terms": [
+        "STEVENS-JOHNSON SYNDROME",
+        "DRUG TOXICITY"
+      ],
+      "log_rr": 1.253,
+      "log_prr": 3.34
+    },
+    {
+      "drug_name": "Phenytoin",
+      "drug_class": "Antiepileptic",
+      "primary_adr": "Toxicity/SJS Risk",
+      "gene": "CYP2C9",
+      "predicted_rr": 2.2,
+      "faers_total_reports": 39851,
+      "faers_adr_reports": 1642,
+      "faers_prr": 28.217,
+      "meddra_terms": [
+        "STEVENS-JOHNSON SYNDROME",
+        "DRUG TOXICITY"
+      ],
+      "log_rr": 0.788,
+      "log_prr": 3.34
+    },
+    {
+      "drug_name": "Rasburicase",
+      "drug_class": "Antigout",
+      "primary_adr": "Hemolytic Anemia Risk",
+      "gene": "G6PD",
+      "predicted_rr": 4.0,
+      "faers_total_reports": 2290,
+      "faers_adr_reports": 40,
+      "faers_prr": 46.923,
+      "meddra_terms": [
+        "HAEMOLYTIC ANAEMIA"
+      ],
+      "log_rr": 1.386,
+      "log_prr": 3.849
+    },
+    {
+      "drug_name": "Rasburicase",
+      "drug_class": "Antigout",
+      "primary_adr": "Severe Hemolytic Anemia",
+      "gene": "G6PD",
+      "predicted_rr": 8.0,
+      "faers_total_reports": 2290,
+      "faers_adr_reports": 40,
+      "faers_prr": 46.923,
+      "meddra_terms": [
+        "HAEMOLYTIC ANAEMIA"
+      ],
+      "log_rr": 2.079,
+      "log_prr": 3.849
+    },
+    {
+      "drug_name": "Rosuvastatin",
+      "drug_class": "Statin",
+      "primary_adr": "Myopathy",
+      "gene": "SLCO1B1",
+      "predicted_rr": 1.65,
+      "faers_total_reports": 218588,
+      "faers_adr_reports": 13172,
+      "faers_prr": 5.395,
+      "meddra_terms": [
+        "MYOPATHY",
+        "MYALGIA",
+        "MUSCULAR WEAKNESS"
+      ],
+      "log_rr": 0.501,
+      "log_prr": 1.685
+    },
+    {
+      "drug_name": "Sertraline",
+      "drug_class": "SSRI",
+      "primary_adr": "Treatment Failure",
+      "gene": "CYP2C19",
+      "predicted_rr": 1.9,
+      "faers_total_reports": 211089,
+      "faers_adr_reports": 21876,
+      "faers_prr": 1.581,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE",
+        "DEPRESSION",
+        "THERAPEUTIC RESPONSE DECREASED"
+      ],
+      "log_rr": 0.642,
+      "log_prr": 0.458
+    },
+    {
+      "drug_name": "Simvastatin",
+      "drug_class": "Statin",
+      "primary_adr": "Myopathy/Rhabdomyolysis",
+      "gene": "SLCO1B1",
+      "predicted_rr": 2.9,
+      "faers_total_reports": 259948,
+      "faers_adr_reports": 16325,
+      "faers_prr": 6.777,
+      "meddra_terms": [
+        "RHABDOMYOLYSIS",
+        "MYOPATHY",
+        "MYALGIA",
+        "BLOOD CREATINE PHOSPHOKINASE INCREASED"
+      ],
+      "log_rr": 1.065,
+      "log_prr": 1.914
+    },
+    {
+      "drug_name": "Simvastatin",
+      "drug_class": "Statin",
+      "primary_adr": "Rhabdomyolysis",
+      "gene": "SLCO1B1",
+      "predicted_rr": 16.9,
+      "faers_total_reports": 259948,
+      "faers_adr_reports": 5744,
+      "faers_prr": 14.732,
+      "meddra_terms": [
+        "RHABDOMYOLYSIS"
+      ],
+      "log_rr": 2.827,
+      "log_prr": 2.69
+    },
+    {
+      "drug_name": "Tacrolimus",
+      "drug_class": "Immunosuppressant",
+      "primary_adr": "Nephrotoxicity (Overexposure)",
+      "gene": "CYP3A5",
+      "predicted_rr": 1.8,
+      "faers_total_reports": 149150,
+      "faers_adr_reports": 5230,
+      "faers_prr": 8.908,
+      "meddra_terms": [
+        "RENAL IMPAIRMENT",
+        "DRUG LEVEL INCREASED"
+      ],
+      "log_rr": 0.588,
+      "log_prr": 2.187
+    },
+    {
+      "drug_name": "Tacrolimus",
+      "drug_class": "Immunosuppressant",
+      "primary_adr": "Standard Dosing Needed",
+      "gene": "CYP3A5",
+      "predicted_rr": 1.3,
+      "faers_total_reports": 149150,
+      "faers_adr_reports": 1809,
+      "faers_prr": 19.583,
+      "meddra_terms": [
+        "DRUG LEVEL INCREASED"
+      ],
+      "log_rr": 0.262,
+      "log_prr": 2.975
+    },
+    {
+      "drug_name": "Tamoxifen",
+      "drug_class": "Anticancer",
+      "primary_adr": "Reduced Efficacy",
+      "gene": "CYP2D6",
+      "predicted_rr": 1.34,
+      "faers_total_reports": 5624,
+      "faers_adr_reports": 190,
+      "faers_prr": 0.616,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE"
+      ],
+      "log_rr": 0.293,
+      "log_prr": -0.485
+    },
+    {
+      "drug_name": "Tamoxifen",
+      "drug_class": "Anticancer",
+      "primary_adr": "Reduced Efficacy/Recurrence",
+      "gene": "CYP2D6",
+      "predicted_rr": 1.34,
+      "faers_total_reports": 5624,
+      "faers_adr_reports": 281,
+      "faers_prr": 0.909,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE",
+        "BREAST CANCER RECURRENT"
+      ],
+      "log_rr": 0.293,
+      "log_prr": -0.095
+    },
+    {
+      "drug_name": "Thioguanine",
+      "drug_class": "Anticancer",
+      "primary_adr": "Myelosuppression",
+      "gene": "TPMT",
+      "predicted_rr": 3.9,
+      "faers_total_reports": 2075,
+      "faers_adr_reports": 219,
+      "faers_prr": 10.66,
+      "meddra_terms": [
+        "NEUTROPENIA",
+        "LEUKOPENIA",
+        "PANCYTOPENIA",
+        "BONE MARROW FAILURE"
+      ],
+      "log_rr": 1.361,
+      "log_prr": 2.366
+    },
+    {
+      "drug_name": "Tramadol",
+      "drug_class": "Opioid",
+      "primary_adr": "Reduced Analgesic Effect",
+      "gene": "CYP2D6",
+      "predicted_rr": 1.5,
+      "faers_total_reports": 37042,
+      "faers_adr_reports": 4592,
+      "faers_prr": 1.588,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE",
+        "PAIN"
+      ],
+      "log_rr": 0.405,
+      "log_prr": 0.462
+    },
+    {
+      "drug_name": "Tramadol",
+      "drug_class": "Opioid",
+      "primary_adr": "Treatment Failure (Analgesic)",
+      "gene": "CYP2D6",
+      "predicted_rr": 2.3,
+      "faers_total_reports": 37042,
+      "faers_adr_reports": 4592,
+      "faers_prr": 1.588,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE",
+        "PAIN"
+      ],
+      "log_rr": 0.833,
+      "log_prr": 0.462
+    },
+    {
+      "drug_name": "Voriconazole",
+      "drug_class": "Antifungal",
+      "primary_adr": "Hepatotoxicity/Toxicity",
+      "gene": "CYP2C19",
+      "predicted_rr": 3.0,
+      "faers_total_reports": 29378,
+      "faers_adr_reports": 982,
+      "faers_prr": 21.363,
+      "meddra_terms": [
+        "HEPATOTOXICITY",
+        "DRUG LEVEL INCREASED"
+      ],
+      "log_rr": 1.099,
+      "log_prr": 3.062
+    },
+    {
+      "drug_name": "Voriconazole",
+      "drug_class": "Antifungal",
+      "primary_adr": "Reduced Efficacy",
+      "gene": "CYP2C19",
+      "predicted_rr": 1.5,
+      "faers_total_reports": 29378,
+      "faers_adr_reports": 4098,
+      "faers_prr": 2.55,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE"
+      ],
+      "log_rr": 0.405,
+      "log_prr": 0.936
+    },
+    {
+      "drug_name": "Voriconazole",
+      "drug_class": "Antifungal",
+      "primary_adr": "Treatment Failure",
+      "gene": "CYP2C19",
+      "predicted_rr": 2.5,
+      "faers_total_reports": 29378,
+      "faers_adr_reports": 4304,
+      "faers_prr": 2.226,
+      "meddra_terms": [
+        "DRUG INEFFECTIVE",
+        "DEPRESSION",
+        "THERAPEUTIC RESPONSE DECREASED"
+      ],
+      "log_rr": 0.916,
+      "log_prr": 0.8
+    },
+    {
+      "drug_name": "Warfarin",
+      "drug_class": "Anticoagulant",
+      "primary_adr": "Dose Adjustment Needed",
+      "gene": "CYP4F2",
+      "predicted_rr": 1.7,
+      "faers_total_reports": 126058,
+      "faers_adr_reports": 10374,
+      "faers_prr": 105.689,
+      "meddra_terms": [
+        "INTERNATIONAL NORMALISED RATIO INCREASED"
+      ],
+      "log_rr": 0.531,
+      "log_prr": 4.661
+    },
+    {
+      "drug_name": "Warfarin",
+      "drug_class": "Anticoagulant",
+      "primary_adr": "Dose Sensitivity",
+      "gene": "CYP2C9",
+      "predicted_rr": 2.05,
+      "faers_total_reports": 126058,
+      "faers_adr_reports": 10374,
+      "faers_prr": 105.689,
+      "meddra_terms": [
+        "INTERNATIONAL NORMALISED RATIO INCREASED"
+      ],
+      "log_rr": 0.718,
+      "log_prr": 4.661
+    },
+    {
+      "drug_name": "Warfarin",
+      "drug_class": "Anticoagulant",
+      "primary_adr": "Dose Sensitivity (Bleeding if unadjusted)",
+      "gene": "VKORC1",
+      "predicted_rr": 2.5,
+      "faers_total_reports": 126058,
+      "faers_adr_reports": 13697,
+      "faers_prr": 21.933,
+      "meddra_terms": [
+        "INTERNATIONAL NORMALISED RATIO INCREASED",
+        "HAEMORRHAGE"
+      ],
+      "log_rr": 0.916,
+      "log_prr": 3.088
+    },
+    {
+      "drug_name": "Warfarin",
+      "drug_class": "Anticoagulant",
+      "primary_adr": "Dose Sensitivity (High Risk)",
+      "gene": "CYP2C9",
+      "predicted_rr": 2.05,
+      "faers_total_reports": 126058,
+      "faers_adr_reports": 13697,
+      "faers_prr": 21.933,
+      "meddra_terms": [
+        "INTERNATIONAL NORMALISED RATIO INCREASED",
+        "HAEMORRHAGE"
+      ],
+      "log_rr": 0.718,
+      "log_prr": 3.088
+    },
+    {
+      "drug_name": "Warfarin",
+      "drug_class": "Anticoagulant",
+      "primary_adr": "Dose Sensitivity (Mild)",
+      "gene": "VKORC1",
+      "predicted_rr": 1.76,
+      "faers_total_reports": 126058,
+      "faers_adr_reports": 10374,
+      "faers_prr": 105.689,
+      "meddra_terms": [
+        "INTERNATIONAL NORMALISED RATIO INCREASED"
+      ],
+      "log_rr": 0.565,
+      "log_prr": 4.661
+    },
+    {
+      "drug_name": "Warfarin",
+      "drug_class": "Anticoagulant",
+      "primary_adr": "Major Bleeding Risk",
+      "gene": "CYP2C9",
+      "predicted_rr": 4.87,
+      "faers_total_reports": 126058,
+      "faers_adr_reports": 7182,
+      "faers_prr": 7.541,
+      "meddra_terms": [
+        "HAEMORRHAGE",
+        "GASTROINTESTINAL HAEMORRHAGE"
+      ],
+      "log_rr": 1.583,
+      "log_prr": 2.02
+    }
+  ]
+}
