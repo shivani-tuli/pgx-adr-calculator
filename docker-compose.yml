@@ -1,0 +1,32 @@
+# ============================================================
+# PGx-ADR Risk Calculator — Docker Compose
+# ============================================================
+# Usage:
+#   docker compose up --build       # Build and start
+#   docker compose up -d            # Start in background
+#   docker compose down             # Stop
+#
+# Access at: http://localhost:3838
+# ============================================================
+
+services:
+  pgx-adr:
+    build: .
+    container_name: pgx-adr-calculator
+    ports:
+      - "3838:3838"
+    volumes:
+      # Persist uploaded VCF results between restarts
+      - pgx-data:/srv/shiny-server/pgx-adr-calculator/data/cache
+    environment:
+      - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3838"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+volumes:
+  pgx-data:

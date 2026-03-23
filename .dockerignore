@@ -1,0 +1,11 @@
+.git
+.gitignore
+.DS_Store
+__pycache__
+*.pyc
+rsconnect/
+pharmcat/.venv/
+pharmcat/pcat/__pycache__/
+data/cache/
+*.Rhistory
+*.RData
