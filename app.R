@@ -451,6 +451,14 @@ ui <- dashboardPage(
               "real-world ADR reporting patterns."
             ),
 
+            h3("Population-Level Validation"),
+            p("The risk model was validated by computing ", strong("Population Attributable Fractions"),
+              " (PAF) using gnomAD allele frequencies and gene-specific risk models, ",
+              "then comparing to published PGx-attributable ADR fractions from CPIC guidelines ",
+              "and landmark clinical trials."),
+            uiOutput("population_validation_summary"),
+            DT::dataTableOutput("population_validation_table"),
+
             h3("Limitations"),
             tags$ul(
               tags$li("For Research Use Only - not for clinical decisions without professional review"),
@@ -1096,6 +1104,73 @@ server <- function(input, output, session) {
 
     DT::datatable(display_df,
       options = list(dom = "ftp", pageLength = 10, order = list(list(4, "desc"))),
+      rownames = FALSE
+    )
+  })
+
+  # ---- Population Validation Display ----
+  pop_report <- tryCatch({
+    jsonlite::fromJSON("data/population_validation_report.json")
+  }, error = function(e) NULL)
+
+  output$population_validation_summary <- renderUI({
+    if (is.null(pop_report)) {
+      return(tags$div(
+        style = "padding: 10px; background: #fffbeb; border-left: 3px solid #f59e0b;
+                 border-radius: 4px; margin: 10px 0;",
+        icon("exclamation-triangle"),
+        " Population validation report not found. Run ",
+        tags$code("Rscript scripts/validate_population.R"), " to generate."
+      ))
+    }
+
+    benchmarks <- pop_report$benchmarks
+    prepare <- benchmarks$prepare_trial
+    n_drugs <- pop_report$n_drugs_validated
+
+    concordant <- if (!is.null(prepare$concordant) && prepare$concordant) TRUE else FALSE
+    bg_color <- if (concordant) "#f0fdf4" else "#fffbeb"
+    border_color <- if (concordant) "#16a34a" else "#f59e0b"
+
+    tags$div(
+      style = sprintf("padding: 12px; background: %s; border-left: 3px solid %s;
+                       border-radius: 4px; margin: 10px 0;", bg_color, border_color),
+      icon(if (concordant) "check-circle" else "info-circle"),
+      sprintf(" Validated across %d drugs. ", n_drugs),
+      tags$br(),
+      tags$strong("PREPARE Trial Concordance: "),
+      sprintf("Model mean PAF = %.1f%% vs. PREPARE observed = %.1f%% — %s",
+              prepare$model_mean_paf_pct, prepare$prepare_observed_reduction_pct,
+              if (concordant) "CONCORDANT" else "DISCORDANT"),
+      tags$br(),
+      tags$span(style = "font-size: 11px; color: #6b7280;",
+        sprintf("Validated: %s | Method: Population Attributable Fraction (PAF) via HWE + gene-specific models",
+                pop_report$validation_date))
+    )
+  })
+
+  output$population_validation_table <- DT::renderDataTable({
+    if (is.null(pop_report) || is.null(pop_report$results)) {
+      return(DT::datatable(
+        data.frame(Message = "No population validation data available."),
+        options = list(dom = "t"), rownames = FALSE
+      ))
+    }
+
+    res <- pop_report$results
+    display_df <- data.frame(
+      Drug = res$drug_name,
+      `PGx Variants` = res$n_variants,
+      Genes = res$genes,
+      `Predicted PAF (%)` = sprintf("%.1f", res$predicted_paf),
+      `Published PGx (%)` = sprintf("%.1f", res$published_pgx_fraction),
+      `At-Risk Pop (%)` = sprintf("%.1f", res$at_risk_population),
+      Source = res$source,
+      check.names = FALSE
+    )
+
+    DT::datatable(display_df,
+      options = list(dom = "ftp", pageLength = 15),
       rownames = FALSE
     )
   })

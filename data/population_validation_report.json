@@ -1,0 +1,182 @@
+{
+  "validation_type": "Population-level ecological validation",
+  "method": "Population Attributable Fraction (PAF) via HWE genotype frequencies from gnomAD, gene-specific risk models (activity_score, x_linked, multiplicative), and LD-aware deduplication.",
+  "benchmarks": {
+    "paf_correlation": {
+      "spearman_rho": -0.011,
+      "spearman_p": 0.9713,
+      "pearson_r": 0.115,
+      "pearson_p": 0.7073,
+      "mae_pct": 26.6
+    },
+    "prepare_trial": {
+      "model_mean_paf_pct": 41.5,
+      "prepare_observed_reduction_pct": 30,
+      "concordant": true
+    },
+    "rank_order": {
+      "mean_rank_displacement": 4.5
+    }
+  },
+  "n_drugs_validated": 13,
+  "interpretation": "WEAK: Limited correlation (rho=-0.01). This is expected because: (1) published PGx fractions include HLA and structural variants not in our rsID-based model, (2) PAF is influenced by allele frequency which varies by ancestry, and (3) ADR definitions differ across source studies.",
+  "validation_date": "2026-04-01T12:30:11-0400",
+  "results": [
+    {
+      "drug_name": "Fluorouracil",
+      "n_variants": 3,
+      "genes": "DPYD",
+      "predicted_paf": 6.3,
+      "published_pgx_fraction": 30,
+      "at_risk_population": 4,
+      "total_adr_rate": 20,
+      "source": "Meulendijks 2015, PMID:25832390",
+      "predicted_rank": 12,
+      "published_rank": 4
+    },
+    {
+      "drug_name": "Capecitabine",
+      "n_variants": 1,
+      "genes": "DPYD",
+      "predicted_paf": 3.2,
+      "published_pgx_fraction": 30,
+      "at_risk_population": 2,
+      "total_adr_rate": 20,
+      "source": "Meulendijks 2015, PMID:25832390",
+      "predicted_rank": 13,
+      "published_rank": 4
+    },
+    {
+      "drug_name": "Warfarin",
+      "n_variants": 4,
+      "genes": "CYP2C9, VKORC1, CYP4F2",
+      "predicted_paf": 74.4,
+      "published_pgx_fraction": 35,
+      "at_risk_population": 100,
+      "total_adr_rate": 3,
+      "source": "IWPC 2009, PMID:19228618",
+      "predicted_rank": 2,
+      "published_rank": 2
+    },
+    {
+      "drug_name": "Simvastatin",
+      "n_variants": 1,
+      "genes": "SLCO1B1",
+      "predicted_paf": 39,
+      "published_pgx_fraction": 17,
+      "at_risk_population": 15.4,
+      "total_adr_rate": 0.1,
+      "source": "SEARCH 2008, PMID:18650507",
+      "predicted_rank": 7,
+      "published_rank": 10
+    },
+    {
+      "drug_name": "Clopidogrel",
+      "n_variants": 3,
+      "genes": "CYP2C19",
+      "predicted_paf": 36.6,
+      "published_pgx_fraction": 12,
+      "at_risk_population": 78.7,
+      "total_adr_rate": 15,
+      "source": "Mega 2010, PMID:20801498",
+      "predicted_rank": 8,
+      "published_rank": 13
+    },
+    {
+      "drug_name": "Irinotecan",
+      "n_variants": 2,
+      "genes": "UGT1A1",
+      "predicted_paf": 49.4,
+      "published_pgx_fraction": 20,
+      "at_risk_population": 61.6,
+      "total_adr_rate": 30,
+      "source": "Innocenti 2009, PMID:19720922",
+      "predicted_rank": 6,
+      "published_rank": 8.5
+    },
+    {
+      "drug_name": "Phenytoin",
+      "n_variants": 1,
+      "genes": "CYP2C9",
+      "predicted_paf": 54.1,
+      "published_pgx_fraction": 13,
+      "at_risk_population": 11.6,
+      "total_adr_rate": 0.07,
+      "source": "Chung 2004/EuroSCAR",
+      "predicted_rank": 3,
+      "published_rank": 12
+    },
+    {
+      "drug_name": "Mercaptopurine",
+      "n_variants": 3,
+      "genes": "TPMT, NUDT15",
+      "predicted_paf": 32.5,
+      "published_pgx_fraction": 25,
+      "at_risk_population": 15.7,
+      "total_adr_rate": 5,
+      "source": "Relling 2019, PMID:30971557",
+      "predicted_rank": 9.5,
+      "published_rank": 6.5
+    },
+    {
+      "drug_name": "Azathioprine",
+      "n_variants": 3,
+      "genes": "TPMT, NUDT15",
+      "predicted_paf": 32.5,
+      "published_pgx_fraction": 25,
+      "at_risk_population": 15.7,
+      "total_adr_rate": 3,
+      "source": "Relling 2019, PMID:30971557",
+      "predicted_rank": 9.5,
+      "published_rank": 6.5
+    },
+    {
+      "drug_name": "Codeine",
+      "n_variants": 5,
+      "genes": "CYP2D6, OPRM1",
+      "predicted_paf": 52.9,
+      "published_pgx_fraction": 15,
+      "at_risk_population": 100,
+      "total_adr_rate": 2,
+      "source": "Crews 2021, PMID:32946532",
+      "predicted_rank": 4,
+      "published_rank": 11
+    },
+    {
+      "drug_name": "Efavirenz",
+      "n_variants": 2,
+      "genes": "CYP2B6",
+      "predicted_paf": 31.3,
+      "published_pgx_fraction": 20,
+      "at_risk_population": 56,
+      "total_adr_rate": 8,
+      "source": "Haas 2004, PMID:15094735",
+      "predicted_rank": 11,
+      "published_rank": 8.5
+    },
+    {
+      "drug_name": "Tacrolimus",
+      "n_variants": 3,
+      "genes": "CYP3A5, ABCB1",
+      "predicted_paf": 75.9,
+      "published_pgx_fraction": 30,
+      "at_risk_population": 100,
+      "total_adr_rate": 15,
+      "source": "Birdwell 2015, PMID:25801146",
+      "predicted_rank": 1,
+      "published_rank": 4
+    },
+    {
+      "drug_name": "Rasburicase",
+      "n_variants": 1,
+      "genes": "G6PD",
+      "predicted_paf": 51.8,
+      "published_pgx_fraction": 80,
+      "at_risk_population": 15.4,
+      "total_adr_rate": 5,
+      "source": "FDA Label, CPIC",
+      "predicted_rank": 5,
+      "published_rank": 1
+    }
+  ]
+}
