@@ -398,11 +398,21 @@ ui <- dashboardPage(
 
             h3("Algorithm"),
             p("For each drug, the combined risk ratio is calculated as an
-              evidence-weighted geometric mean:"),
-            tags$pre("Combined_Risk = exp( sum(log(variant_risk_i * w_i)) / sum(w_i) )"),
-            p("Where variant_risk is the base risk ratio raised to the power of
-              the allele count, and weights are derived from PharmGKB/CPIC
-              evidence levels (1A=1.0 through 4=0.1)."),
+              evidence-weighted geometric mean with gene-specific inheritance models:"),
+            tags$pre("Combined_Risk = exp( Σ [log(variant_risk_i) × w_i] / Σ w_i )"),
+            p("Key improvements:"),
+            tags$ul(
+              tags$li(strong("Gene-specific models:"), " DPYD, TPMT, NUDT15, UGT1A1 use ",
+                      "CPIC activity score-based het/hom risk ratios instead of the ",
+                      "multiplicative model. G6PD uses X-linked inheritance."),
+              tags$li(strong("LD-aware deduplication:"), " Variants in the same haplotype ",
+                      "group are deduplicated to prevent double-counting."),
+              tags$li(strong("CI propagation:"), " Combined 95% confidence intervals are ",
+                      "computed via delta method on the log-scale."),
+              tags$li(strong("Sensitivity analysis:"), " Risk scores are tested under 3 ",
+                      "different evidence weight schemes (CPIC-aligned, Binary, Linear) ",
+                      "to check robustness.")
+            ),
 
             h3("Data Sources"),
             tags$ul(
@@ -863,15 +873,16 @@ server <- function(input, output, session) {
       select(
         Drug = drug_name,
         Class = drug_class,
-        `Risk Ratio` = combined_risk_ratio,
+        `Risk Ratio (95% CI)` = ci_display,
         Category = risk_category,
+        Robustness = sensitivity_badge,
         `Primary ADR` = primary_adr,
         Severity = adr_severity,
         `# Variants` = n_variants,
         Genes = genes_involved,
+        Model = models_used,
         Evidence = max_evidence
-      ) %>%
-      mutate(`Risk Ratio` = sprintf("%.2fx", `Risk Ratio`))
+      )
 
     DT::datatable(display_df,
       options = list(

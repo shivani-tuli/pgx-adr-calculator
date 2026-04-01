@@ -24,7 +24,11 @@ PGx-ADR is an interactive web application that calculates **quantitative adverse
 
 - **VCF Upload**: Parse standard VCF files to extract pharmacogenomic variants
 - **Manual Entry**: Enter rsIDs with genotypes (e.g., `rs1799853:0/1`)
-- **Evidence-Weighted Risk Scoring**: Novel multiplicative model using CPIC/PharmGKB evidence levels
+- **Gene-Specific Risk Models**: CPIC activity score-based models for DPYD, TPMT, NUDT15, UGT1A1; X-linked model for G6PD
+- **Evidence-Weighted Risk Scoring**: Geometric mean model using CPIC/PharmGKB evidence levels
+- **LD-Aware Deduplication**: Prevents double-counting variants that tag the same haplotype
+- **95% Confidence Intervals**: Delta method CI propagation on combined risk scores
+- **Sensitivity Analysis**: Robustness testing across 3 evidence weight schemes
 - **Multi-Gene Aggregation**: Combines risk across all pharmacogenes affecting each drug
 - **Population Context**: Compares variant frequencies across 6 ancestry groups (gnomAD-derived)
 - **Interactive Dashboard**: Risk heatmaps, bar charts, gene-level summaries
@@ -42,7 +46,7 @@ Combined_Risk = exp( Σ [log(variant_risk_i) × w_i] / Σ w_i )
 ```
 
 Where:
-- `variant_risk_i = base_risk_ratio ^ allele_count` (per-allele multiplicative model)
+- `variant_risk_i` depends on the gene's inheritance model (see below)
 - `w_i` = evidence weight from PharmGKB/CPIC evidence levels:
 
 | Evidence Level | Weight | Description |
@@ -53,6 +57,39 @@ Where:
 | 2B | 0.5 | Moderate evidence |
 | 3  | 0.3 | Single significant study |
 | 4  | 0.1 | Case report |
+
+### Gene-Specific Inheritance Models
+
+Not all pharmacogenes follow a simple multiplicative (codominant) model. PGx-ADR uses gene-specific risk assignment:
+
+| Gene | Model | Heterozygote Risk | Homozygote Risk | Source |
+|------|-------|-------------------|-----------------|--------|
+| DPYD | Activity score | 2.54x | 25.6x | PMID:27296574, Henricks 2019 |
+| TPMT | Activity score | 3.9x | 6.67x | PMID:31342537, 25201288 |
+| NUDT15 | Activity score | 3.0x | 25.0x | PMID:26878728 |
+| UGT1A1 | Activity score | 1.9x | 5.34x | PMID:23529007, 28529590 |
+| G6PD | X-linked | Full effect | Full effect | CPIC guideline |
+| All others | Multiplicative | RR^1 | RR^2 | Standard codominant |
+
+### LD-Aware Haplotype Deduplication
+
+Multiple rsIDs that tag the same star allele (e.g., rs3892097 and rs28399504 both tag CYP2D6\*4) are grouped by `haplotype_group`. Within each drug × haplotype group, only the highest-risk variant is retained to prevent double-counting.
+
+### Confidence Interval Propagation
+
+Combined risk scores include 95% CIs computed via the delta method on the log-scale geometric mean. When individual association CIs are unavailable (curated entries), a conservative default SE of 0.5 is used.
+
+### Sensitivity Analysis
+
+Risk scores are computed under 3 different evidence weight schemes to assess robustness:
+
+| Scheme | 1A | 1B | 2A | 2B | 3 | 4 |
+|--------|----|----|----|----|---|---|
+| CPIC-aligned | 1.0 | 0.9 | 0.7 | 0.5 | 0.3 | 0.1 |
+| Binary | 1.0 | 1.0 | 1.0 | 0.5 | 0.0 | 0.0 |
+| Linear | 1.0 | 0.83 | 0.67 | 0.5 | 0.33 | 0.17 |
+
+Each drug receives a **Robustness badge**: "Robust" if the risk category is consistent across all schemes, "Weight-Sensitive" if it changes.
 
 ### Risk Categories
 

@@ -22,6 +22,118 @@ EVIDENCE_WEIGHTS <- c(
   "4"  = 0.1    # Case report or in vitro
 )
 
+# Alternative weight schemes for sensitivity analysis
+WEIGHT_SCHEMES <- list(
+  "CPIC-aligned" = c("1A"=1.0, "1B"=0.9, "2A"=0.7, "2B"=0.5, "3"=0.3, "4"=0.1),
+  "Binary"       = c("1A"=1.0, "1B"=1.0, "2A"=1.0, "2B"=0.5, "3"=0.0, "4"=0.0),
+  "Linear"       = c("1A"=1.0, "1B"=0.83, "2A"=0.67, "2B"=0.5, "3"=0.33, "4"=0.17)
+)
+
+# ---- Gene-Specific Risk Models ----
+# For genes where the multiplicative (risk^allele_count) model is wrong,
+# use published heterozygote and homozygote risk ratios directly.
+# Sources: CPIC guidelines + meta-analyses (PMIDs in comments)
+GENE_RISK_MODELS <- list(
+  # DPYD: het ~2.54x, hom ~25.6x (not 2.54^2=6.45x)
+  # PMID:27296574 (het), PMID:Henricks 2019 JCO (hom)
+  "DPYD"   = list(het = 2.54, hom = 25.6),
+  # TPMT: het ~3.9x, hom ~6.67x (PMID:31342537, 25201288)
+  "TPMT"   = list(het = 3.9,  hom = 6.67),
+  # NUDT15: het ~3.0x, hom ~25.0x (PMID:26878728)
+  "NUDT15" = list(het = 3.0,  hom = 25.0),
+  # UGT1A1: het ~1.9x, hom ~5.34x (PMID:23529007, 28529590)
+  "UGT1A1" = list(het = 1.9,  hom = 5.34),
+  # G6PD: hemizygous males are fully affected; risk stored is for deficient state
+  "G6PD"   = list(het = 1.5,  hom = 8.0)
+)
+
+# ---- Gene-Specific Variant Risk ----
+# Replaces the naive risk^allele_count model
+get_variant_risk <- function(gene, base_rr, allele_count, genetic_model = "multiplicative") {
+  if (allele_count == 0) return(1.0)
+
+  if (genetic_model == "activity_score" && gene %in% names(GENE_RISK_MODELS)) {
+    model <- GENE_RISK_MODELS[[gene]]
+    if (allele_count == 1) return(model$het)
+    if (allele_count >= 2) return(model$hom)
+    return(1.0)
+  }
+
+  if (genetic_model == "x_linked" && gene %in% names(GENE_RISK_MODELS)) {
+    model <- GENE_RISK_MODELS[[gene]]
+    # For X-linked: even het can be fully affected (hemizygous males)
+    # Use the base risk ratio from data (which represents the deficient state)
+    if (allele_count >= 1) return(base_rr)
+    return(1.0)
+  }
+
+  # Default: multiplicative (codominant) model
+  return(base_rr ^ allele_count)
+}
+
+# ---- Combined CI via Delta Method ----
+# Propagates uncertainty from individual variant CIs to the combined risk score
+compute_combined_ci <- function(log_rrs, ci_lowers, ci_uppers, weights) {
+  # Estimate SE on log scale from CIs
+  log_ses <- mapply(function(rr, lo, hi) {
+    if (is.na(lo) || is.na(hi) || lo <= 0 || hi <= 0) {
+      return(0.5)  # conservative default SE when CI unavailable
+    }
+    (log(hi) - log(lo)) / (2 * 1.96)
+  }, log_rrs, ci_lowers, ci_uppers)
+
+  w <- weights / sum(weights)
+  log_combined <- sum(log_rrs * w)
+
+  # Variance of weighted mean (assumes independent sources)
+  log_var <- sum((w^2) * (log_ses^2))
+  log_se  <- sqrt(log_var)
+
+  has_any_ci <- !all(is.na(ci_lowers) | is.na(ci_uppers))
+
+  list(
+    combined_rr = exp(log_combined),
+    ci_lower    = exp(log_combined - 1.96 * log_se),
+    ci_upper    = exp(log_combined + 1.96 * log_se),
+    has_ci      = has_any_ci
+  )
+}
+
+# ---- Sensitivity Analysis ----
+# Runs risk scoring under 3 different weight schemes to check robustness
+run_sensitivity_analysis <- function(matched_data) {
+  if (is.null(matched_data) || nrow(matched_data) == 0) return(NULL)
+
+  results <- lapply(names(WEIGHT_SCHEMES), function(scheme_name) {
+    w <- WEIGHT_SCHEMES[[scheme_name]]
+    matched_data %>%
+      dplyr::mutate(sw = w[evidence_level]) %>%
+      dplyr::group_by(drug_name) %>%
+      dplyr::summarise(
+        rr = exp(sum(log(variant_risk) * sw) / sum(sw)),
+        scheme = scheme_name,
+        .groups = "drop"
+      )
+  })
+
+  combined <- dplyr::bind_rows(results)
+
+  # For each drug, check if risk category is the same across all schemes
+  stability <- combined %>%
+    dplyr::mutate(category = categorize_risk(rr)) %>%
+    dplyr::group_by(drug_name) %>%
+    dplyr::summarise(
+      n_categories = dplyr::n_distinct(category),
+      min_rr = min(rr),
+      max_rr = max(rr),
+      sensitivity_badge = ifelse(dplyr::n_distinct(category) == 1,
+                                  "Robust", "Weight-Sensitive"),
+      .groups = "drop"
+    )
+
+  return(stability)
+}
+
 # ---- Risk Categories ----
 categorize_risk <- function(risk_ratio) {
   dplyr::case_when(
@@ -127,13 +239,13 @@ parse_manual_entry <- function(entry_text) {
 # ---- Core Risk Scoring Algorithm ----
 #
 # For each drug, the combined risk ratio is:
-#   Combined_Risk = exp( sum(log(variant_risk_i * w_i)) / sum(w_i) )
+#   Combined_Risk = exp( Σ [log(variant_risk_i) × w_i] / Σ w_i )
 #
-# Where:
-#   variant_risk_i = base_risk_ratio ^ allele_count
-#   w_i            = evidence_weight for that association
-#
-# This produces an evidence-weighted geometric mean of per-variant risks.
+# Key improvements over naive model:
+#   1. Gene-specific risk: uses activity_score/x_linked models where appropriate
+#   2. LD-aware: deduplicates variants in same haplotype group per drug
+#   3. CI propagation: delta method on log-scale geometric mean
+#   4. Sensitivity analysis: runs 3 weight schemes to check robustness
 
 calculate_risk_scores <- function(patient_variants, pgx_associations) {
   if (is.null(patient_variants) || nrow(patient_variants) == 0) {
@@ -149,21 +261,61 @@ calculate_risk_scores <- function(patient_variants, pgx_associations) {
 
   if (nrow(matched) == 0) return(NULL)
 
-  # Calculate per-variant risk
+  # Handle missing new columns gracefully (backward compat)
+  if (!"genetic_model" %in% names(matched)) {
+    matched$genetic_model <- "multiplicative"
+  }
+  if (!"haplotype_group" %in% names(matched)) {
+    matched$haplotype_group <- paste0(matched$gene, "_", matched$allele_name)
+  }
+
+  # ---- LD-Aware Deduplication ----
+  # Within each drug + haplotype_group, keep only the highest-risk variant
+  # to prevent double-counting rsIDs that tag the same star allele
+  matched <- matched %>%
+    dplyr::group_by(drug_name, haplotype_group) %>%
+    dplyr::slice_max(order_by = risk_ratio * allele_count, n = 1,
+                      with_ties = FALSE) %>%
+    dplyr::ungroup()
+
+  # ---- Gene-Specific Risk Calculation ----
   matched <- matched %>%
     dplyr::mutate(
       evidence_weight = EVIDENCE_WEIGHTS[evidence_level],
-      variant_risk    = risk_ratio ^ allele_count,
-      weighted_log_risk = log(variant_risk) * evidence_weight
+      variant_risk    = mapply(get_variant_risk, gene, risk_ratio,
+                                allele_count, genetic_model),
+      weighted_log_risk = log(pmax(variant_risk, 1e-6)) * evidence_weight
     )
 
-  # Aggregate by drug
+  # ---- Sensitivity Analysis ----
+  sensitivity <- run_sensitivity_analysis(matched)
+
+  # ---- Aggregate by Drug with CI Propagation ----
   drug_scores <- matched %>%
     dplyr::group_by(drug_name, drug_class) %>%
     dplyr::summarise(
       combined_risk_ratio = exp(sum(weighted_log_risk) / sum(evidence_weight)),
+      ci_lower = compute_combined_ci(
+        log(pmax(variant_risk, 1e-6)),
+        suppressWarnings(as.numeric(ci_lower)),
+        suppressWarnings(as.numeric(ci_upper)),
+        evidence_weight
+      )$ci_lower,
+      ci_upper = compute_combined_ci(
+        log(pmax(variant_risk, 1e-6)),
+        suppressWarnings(as.numeric(ci_lower)),
+        suppressWarnings(as.numeric(ci_upper)),
+        evidence_weight
+      )$ci_upper,
+      has_ci = compute_combined_ci(
+        log(pmax(variant_risk, 1e-6)),
+        suppressWarnings(as.numeric(ci_lower)),
+        suppressWarnings(as.numeric(ci_upper)),
+        evidence_weight
+      )$has_ci,
       n_variants          = dplyr::n(),
       genes_involved      = paste(unique(gene), collapse = ", "),
+      models_used         = paste(unique(genetic_model), collapse = ", "),
       primary_adr         = dplyr::first(primary_adr),
       adr_severity        = dplyr::first(adr_severity),
       max_evidence        = dplyr::first(sort(unique(evidence_level))),
@@ -176,9 +328,19 @@ calculate_risk_scores <- function(patient_variants, pgx_associations) {
     ) %>%
     dplyr::mutate(
       risk_category = categorize_risk(combined_risk_ratio),
-      risk_color    = risk_color(risk_category)
+      risk_color    = risk_color(risk_category),
+      ci_display = ifelse(has_ci,
+        sprintf("%.2f (%.2f–%.2f)", combined_risk_ratio, ci_lower, ci_upper),
+        sprintf("%.2f (CI unavailable)", combined_risk_ratio)
+      )
     ) %>%
     dplyr::arrange(dplyr::desc(combined_risk_ratio))
+
+  # Attach sensitivity badges
+  if (!is.null(sensitivity)) {
+    drug_scores <- dplyr::left_join(drug_scores, sensitivity,
+                                     by = "drug_name")
+  }
 
   return(drug_scores)
 }
@@ -195,14 +357,23 @@ summarize_by_gene <- function(patient_variants, pgx_associations) {
 
   if (nrow(matched) == 0) return(NULL)
 
+  # Handle missing columns
+  if (!"genetic_model" %in% names(matched)) {
+    matched$genetic_model <- "multiplicative"
+  }
+
   gene_summary <- matched %>%
+    dplyr::mutate(
+      computed_risk = mapply(get_variant_risk, gene, risk_ratio,
+                             allele_count, genetic_model)
+    ) %>%
     dplyr::group_by(gene) %>%
     dplyr::summarise(
       n_variants    = dplyr::n_distinct(rsid),
       drugs_affected = paste(unique(drug_name), collapse = ", "),
       n_drugs       = dplyr::n_distinct(drug_name),
       variants      = paste(unique(rsid), collapse = ", "),
-      max_risk      = max(risk_ratio ^ allele_count, na.rm = TRUE),
+      max_risk      = max(computed_risk, na.rm = TRUE),
       .groups       = "drop"
     ) %>%
     dplyr::arrange(dplyr::desc(max_risk))
